@@ -45,20 +45,6 @@
     }
     return _dataList;
 }
--(void)viewWillAppear:(BOOL)animated
-{
-    NSUserDefaults * stdDefault = [NSUserDefaults standardUserDefaults];
-    NSString * str=[stdDefault objectForKey:@"user_name"];
-    if ([str length]>0) {
-        
-    }else{
-        BRSlogInViewController * logIn=[[BRSlogInViewController alloc] init];
-        UINavigationController * nvc=[[UINavigationController alloc] initWithRootViewController:logIn];
-        
-        nvc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        [self presentViewController:nvc animated:YES completion:nil];
-    }
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

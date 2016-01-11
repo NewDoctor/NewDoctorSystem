@@ -8,15 +8,12 @@
 
 #import "DocHomeViewController.h"
 #import "DocAllWorkViewController.h"
-#import "DocOnlineViewController.h"
 #import "DocPhoneViewController.h"
 #import "DocLookAfterViewController.h"
 #import "WbToolBarFour.h"
 #import "DocRecordViewController.h"
 #import "NIDropDown.h"
 #import "MainViewController.h"
-#import "DocOnLineViewController2.h"
-#import "ChatListViewController.h"
 
 @interface DocHomeViewController ()<NIDropDownDelegate>
 
@@ -25,7 +22,6 @@
 @implementation DocHomeViewController
 {
     DocAllWorkViewController * allWork;
-    ChatListViewController * online;
     DocPhoneViewController * phone;
     DocLookAfterViewController * lookAfter;
     WbToolBarFour * bar;
@@ -50,7 +46,7 @@
     
     if (!bar) {
         bar = [[WbToolBarFour alloc] initWithFrame:CGRectMake(0, 64, appWidth, 40)];
-        bar.dataSource = [[NSArray alloc] initWithObjects:@"全部",@"线上咨询",@"电话咨询",@"照护", nil];
+        bar.dataSource = [[NSArray alloc] initWithObjects:@"全部",@"电话咨询",@"未完成", nil];
         bar.delegate = self;
         [bar drawFristRect:CGRectMake(0, 64, appWidth, 40)];
         [self.view addSubview:bar];
@@ -68,7 +64,6 @@
         [self.view addSubview:allWork.view];
     }
     allWork.view.hidden=NO;
-    online.view.hidden=YES;
     phone.view.hidden=YES;
     lookAfter.view.hidden=YES;
     if(firstShow==1){
@@ -126,42 +121,27 @@
             [self.view addSubview:allWork.view];
         }
         allWork.view.hidden=NO;
-        online.view.hidden=YES;
         phone.view.hidden=YES;
         lookAfter.view.hidden=YES;
         [self.view bringSubviewToFront:allWork.view];
         [self.view bringSubviewToFront:bar];
     }else if (index==1){
-        if (!online) {
-            online=[[ChatListViewController alloc] init];
-            [self.view addSubview:online.view];
-        }
-        allWork.view.hidden=YES;
-        online.view.hidden=NO;
-        phone.view.hidden=YES;
-        lookAfter.view.hidden=YES;
-        [self.view bringSubviewToFront:online.view];
-        [self.view bringSubviewToFront:bar];
-        
-    }else if (index==2){
         if (!phone) {
             phone=[[DocPhoneViewController alloc] init];
             [self.view addSubview:phone.view];
         }
         allWork.view.hidden=YES;
-        online.view.hidden=YES;
         phone.view.hidden=NO;
         lookAfter.view.hidden=YES;
         [self.view bringSubviewToFront:phone.view];
         [self.view bringSubviewToFront:bar];
     }
-    else if (index==3){
+    else if (index==2){
         if (!lookAfter) {
             lookAfter=[[DocLookAfterViewController alloc] init];
             [self.view addSubview:lookAfter.view];
         }
         allWork.view.hidden=YES;
-        online.view.hidden=YES;
         phone.view.hidden=YES;
         lookAfter.view.hidden=NO;
         [self.view bringSubviewToFront:lookAfter.view];

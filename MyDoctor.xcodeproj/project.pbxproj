@@ -135,7 +135,6 @@
 		15FBDD3D1C152A18009E7E39 /* DocAllWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FBDD3C1C152A18009E7E39 /* DocAllWorkViewController.m */; };
 		15FBDD441C152AC0009E7E39 /* DocLookAfterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FBDD3F1C152AC0009E7E39 /* DocLookAfterViewController.m */; };
 		15FBDD451C152AC0009E7E39 /* DocPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FBDD411C152AC0009E7E39 /* DocPhoneViewController.m */; };
-		15FBDD461C152AC0009E7E39 /* DocOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FBDD431C152AC0009E7E39 /* DocOnlineViewController.m */; };
 		15FBDD491C152B56009E7E39 /* WbToolBarFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FBDD481C152B56009E7E39 /* WbToolBarFour.m */; };
 		15FBDD4D1C153490009E7E39 /* DocServiceFolerVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FBDD4C1C153490009E7E39 /* DocServiceFolerVO.m */; };
 		15FBDD501C1535D7009E7E39 /* DocHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FBDD4F1C1535D7009E7E39 /* DocHomeTableViewCell.m */; };
@@ -558,7 +557,6 @@
 		6ABBAD081C3B7366008F064C /* 进入@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABBAD071C3B7366008F064C /* 进入@3x.png */; };
 		6ABBAD0B1C4335E0008F064C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ABBAD091C4335E0008F064C /* Bolts.framework */; };
 		6ABBAD0C1C4335E0008F064C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ABBAD0A1C4335E0008F064C /* Parse.framework */; };
-		6ABD0BE11C311DFA00FEE47F /* DocOnLineViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD0BE01C311DFA00FEE47F /* DocOnLineViewController2.m */; };
 		6ABD0BE81C321C8400FEE47F /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABD0BE21C321C8400FEE47F /* home@2x.png */; };
 		6ABD0BE91C321C8400FEE47F /* homeback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABD0BE31C321C8400FEE47F /* homeback@2x.png */; };
 		6ABD0BEA1C321C8400FEE47F /* my@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABD0BE41C321C8400FEE47F /* my@2x.png */; };
@@ -917,8 +915,6 @@
 		15FBDD3F1C152AC0009E7E39 /* DocLookAfterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocLookAfterViewController.m; path = DocHome/DocLookAfterViewController.m; sourceTree = "<group>"; };
 		15FBDD401C152AC0009E7E39 /* DocPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocPhoneViewController.h; path = DocHome/DocPhoneViewController.h; sourceTree = "<group>"; };
 		15FBDD411C152AC0009E7E39 /* DocPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocPhoneViewController.m; path = DocHome/DocPhoneViewController.m; sourceTree = "<group>"; };
-		15FBDD421C152AC0009E7E39 /* DocOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocOnlineViewController.h; path = DocHome/DocOnlineViewController.h; sourceTree = "<group>"; };
-		15FBDD431C152AC0009E7E39 /* DocOnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocOnlineViewController.m; path = DocHome/DocOnlineViewController.m; sourceTree = "<group>"; };
 		15FBDD471C152B56009E7E39 /* WbToolBarFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WbToolBarFour.h; sourceTree = "<group>"; };
 		15FBDD481C152B56009E7E39 /* WbToolBarFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WbToolBarFour.m; sourceTree = "<group>"; };
 		15FBDD4B1C153490009E7E39 /* DocServiceFolerVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocServiceFolerVO.h; path = DocHome/DocServiceFolerVO/DocServiceFolerVO.h; sourceTree = "<group>"; };
@@ -1534,8 +1530,6 @@
 		6ABBAD071C3B7366008F064C /* 进入@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进入@3x.png"; sourceTree = "<group>"; };
 		6ABBAD091C4335E0008F064C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		6ABBAD0A1C4335E0008F064C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		6ABD0BDF1C311DFA00FEE47F /* DocOnLineViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocOnLineViewController2.h; path = DocHome/DocOnLineViewController2.h; sourceTree = "<group>"; };
-		6ABD0BE01C311DFA00FEE47F /* DocOnLineViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocOnLineViewController2.m; path = DocHome/DocOnLineViewController2.m; sourceTree = "<group>"; };
 		6ABD0BE21C321C8400FEE47F /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		6ABD0BE31C321C8400FEE47F /* homeback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeback@2x.png"; sourceTree = "<group>"; };
 		6ABD0BE41C321C8400FEE47F /* my@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my@2x.png"; sourceTree = "<group>"; };
@@ -2196,7 +2190,6 @@
 		15CD4B661C15285A009B5E4B /* DoctorHome */ = {
 			isa = PBXGroup;
 			children = (
-				6AF404791C2CE64700D46F2A /* DocChatView */,
 				15FBDD4A1C1533B8009E7E39 /* DocServiceFolerVO */,
 				15FBDD381C1528F3009E7E39 /* DocHomeViewController.h */,
 				15FBDD391C1528F3009E7E39 /* DocHomeViewController.m */,
@@ -2206,10 +2199,6 @@
 				15FBDD4F1C1535D7009E7E39 /* DocHomeTableViewCell.m */,
 				6AF404E21C31021300D46F2A /* DocHomeCell.h */,
 				6AF404E31C31021300D46F2A /* DocHomeCell.m */,
-				15FBDD421C152AC0009E7E39 /* DocOnlineViewController.h */,
-				15FBDD431C152AC0009E7E39 /* DocOnlineViewController.m */,
-				6ABD0BDF1C311DFA00FEE47F /* DocOnLineViewController2.h */,
-				6ABD0BE01C311DFA00FEE47F /* DocOnLineViewController2.m */,
 				15FBDD401C152AC0009E7E39 /* DocPhoneViewController.h */,
 				15FBDD411C152AC0009E7E39 /* DocPhoneViewController.m */,
 				15FBDD3E1C152AC0009E7E39 /* DocLookAfterViewController.h */,
@@ -2503,6 +2492,7 @@
 		15FBDD511C15574B009E7E39 /* DoctorPatient */ = {
 			isa = PBXGroup;
 			children = (
+				6AF404791C2CE64700D46F2A /* DocChatView */,
 				1532A7001C3F875100D0582B /* Model */,
 				15FBDD611C155AC9009E7E39 /* DocPatientFolerVO */,
 				15FBDD521C1557CB009E7E39 /* DocPatientViewController.h */,
@@ -4251,7 +4241,6 @@
 				15528BC91C28DFCF00B1F409 /* MDConsultDrugModel.m in Sources */,
 				153C1E871C03FB8C00F87014 /* View+MASAdditions.m in Sources */,
 				6AF404D91C2D077000D46F2A /* AddFriendViewController.m in Sources */,
-				6ABD0BE11C311DFA00FEE47F /* DocOnLineViewController2.m in Sources */,
 				6AB9BAD91C2BE348004BF6A7 /* PSTCollectionViewUpdateItem.m in Sources */,
 				6AB9B8791C2BE095004BF6A7 /* InvitationManager.m in Sources */,
 				6AB9BB2C1C2BE78E004BF6A7 /* amrFileCodec.mm in Sources */,
@@ -4360,7 +4349,6 @@
 				6AB9B14E1C239E21004BF6A7 /* MDActivityBtnCell.m in Sources */,
 				15FBDD5A1C155868009E7E39 /* DocUnfinishPatientViewController.m in Sources */,
 				15FBDD451C152AC0009E7E39 /* DocPhoneViewController.m in Sources */,
-				15FBDD461C152AC0009E7E39 /* DocOnlineViewController.m in Sources */,
 				6AF2021F1C083F4000933EAF /* activityCell.m in Sources */,
 				6AB9BA241C2BE21F004BF6A7 /* BaseViewController.m in Sources */,
 				6AB9BAD81C2BE348004BF6A7 /* PSTCollectionViewLayout.m in Sources */,

@@ -29,13 +29,13 @@
     [bgImage drawInRect:rect];
     
     cursor = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"header_select1"]];
-    cursor.frame = CGRectMake(0, 0, appWidth/4, kTollBarHeight+5);
+    cursor.frame = CGRectMake(0, 0, appWidth/3, kTollBarHeight+5);
     cursor.userInteractionEnabled = YES;
     [self addSubview:cursor];
     
     for (int i = 0; i < dataSource.count; i++) {
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(i*appWidth/4, 0, appWidth/4, kTollBarHeight-4);
+        button.frame = CGRectMake(i*appWidth/3, 0, appWidth/3, kTollBarHeight-4);
         button.tag = 100 + i;
         button.showsTouchWhenHighlighted = YES;
         [button setTitle:[dataSource objectAtIndex:i] forState:UIControlStateNormal];
@@ -53,16 +53,16 @@
         [self addSubview:button];
         
     }
-    UIView *lineView1 = [[UIView alloc]initWithFrame:CGRectMake(appWidth/4, 1, 1, kTollBarHeight-5)];
+    UIView *lineView1 = [[UIView alloc]initWithFrame:CGRectMake(appWidth/3, 1, 1, kTollBarHeight-5)];
     lineView1.backgroundColor = RedColor;
     [self addSubview:lineView1];
-    UIView *lineView2 = [[UIView alloc]initWithFrame:CGRectMake(2*(appWidth/4), 1, 1, kTollBarHeight-5)];
+    UIView *lineView2 = [[UIView alloc]initWithFrame:CGRectMake(2*(appWidth/3), 1, 1, kTollBarHeight-5)];
     lineView2.backgroundColor = RedColor;
     [self addSubview:lineView2];
-    
-    UIView *lineView3 = [[UIView alloc]initWithFrame:CGRectMake(3*appWidth/4, 1, 1, kTollBarHeight-5)];
-    lineView3.backgroundColor = RedColor;
-    [self addSubview:lineView3];
+//    
+//    UIView *lineView3 = [[UIView alloc]initWithFrame:CGRectMake(3*appWidth/4, 1, 1, kTollBarHeight-5)];
+//    lineView3.backgroundColor = RedColor;
+//    [self addSubview:lineView3];
     
     UIView *lineView4 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, appWidth, 1)];
     lineView4.backgroundColor = RedColor;
@@ -80,7 +80,7 @@
 -(void) tagSelected:(id)sender {
     UIButton *selectedButton = (UIButton*)sender;
     if (selectedButton != lastSelectedElement) {
-        for (int i=0; i<4; i++) {
+        for (int i=0; i<3; i++) {
             UIButton * button1=(UIButton *)[self viewWithTag:100+i];
             button1.selected=NO;
         }

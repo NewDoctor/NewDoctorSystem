@@ -13,7 +13,7 @@
 #import "BRSlogInViewController.h"
 
 #import "DocHomeViewController.h"
-#import "DocPatientViewController.h"
+#import "MainViewController.h"
 #import "DocMyViewController.h"
 #import "EaseMob.h"
 
@@ -32,7 +32,7 @@
     MDHomeViewController * home;
     
     DocHomeViewController * docHome;
-    DocPatientViewController * docPatient;
+    MainViewController * docPatient;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -45,8 +45,8 @@
     NSString *homeDirectory = NSHomeDirectory();
     NSLog(@"path:%@", homeDirectory);
     
-//    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"showBRSMainView"  object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMainView) name:@"showBRSMainView" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"showBRSMainView"  object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showDocView) name:@"showBRSMainView" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"backselected1"  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(backselected1) name:@"backselected1" object:nil];
     
@@ -55,10 +55,16 @@
 //    [drawView setFrame:appFrame];
 //    [self.window addSubview:drawView];
     
+    NSUserDefaults * stdDefault = [NSUserDefaults standardUserDefaults];
+    NSString * str=[stdDefault objectForKey:@"user_name"];
+    if ([str length]>0) {
+        [self showDocView];
+    }else{
+        [self logIn];
+    }
     
-//    [self logIn];
     //医生端
-    [self showDocView];
+//
 //    [self showMainView];
     [[UINavigationBar appearance] setBackgroundColor:RGBACOLOR(239, 239, 239, 1)];
 //    [[UINavigationBar appearance] setBackgroundColor:[UIColor whiteColor]];
@@ -73,14 +79,14 @@
     return YES;
 }
 
-//-(void)logIn
-//{
-//    BRSlogInViewController * liv=[[BRSlogInViewController alloc] init];
-//    UINavigationController * nvc=[[UINavigationController alloc] initWithRootViewController:liv];
-//    self.window.rootViewController=nvc;
-//    [self.window makeKeyAndVisible];
-//
-//}
+-(void)logIn
+{
+    BRSlogInViewController * liv=[[BRSlogInViewController alloc] init];
+    UINavigationController * nvc=[[UINavigationController alloc] initWithRootViewController:liv];
+    self.window.rootViewController=nvc;
+    [self.window makeKeyAndVisible];
+
+}
 
 #pragma mark - mainView
 @synthesize tabBarController = _tabBarController;
@@ -134,11 +140,12 @@
     homeNav.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"首页" image:[normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
     
-    docPatient=[[DocPatientViewController alloc] init];
+    docPatient=[[MainViewController alloc] init];
+    [docPatient networkChanged:eEMConnectionConnected];
     serviceNav=[[UINavigationController alloc] initWithRootViewController:docPatient];
     normalImage = [UIImage imageNamed:@"serviceback"];
     selectImage = [UIImage imageNamed:@"service"];
-    serviceNav.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"患者" image:[normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    serviceNav.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"会话" image:[normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
     docMy=[[DocMyViewController alloc] init];
     myNav = [[UINavigationController alloc] initWithRootViewController:docMy];
@@ -146,7 +153,7 @@
     selectImage = [UIImage imageNamed:@"my"];
     myNav.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"我的" image:[normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     _tabBarController.viewControllers = [NSArray arrayWithObjects:homeNav,serviceNav,myNav, nil];
-    
+    _tabBarController.view.backgroundColor=[UIColor whiteColor];
     [self.window setRootViewController:_tabBarController];
     [self.window makeKeyAndVisible];
     [self applicationWillEnterForeground:nil];//主动触发一次fromlastseen

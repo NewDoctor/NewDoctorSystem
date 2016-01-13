@@ -27,10 +27,9 @@
     UINavigationController *serviceNav;
     UINavigationController *myNav;
     MDMyViewController * my;
-    DocMyViewController * docMy;
     MDServiceViewController * service;
     MDHomeViewController * home;
-    
+
     DocHomeViewController * docHome;
     MainViewController * docPatient;
 }
@@ -47,6 +46,9 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"showBRSMainView"  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showDocView) name:@"showBRSMainView" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"endLoginCount"  object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logIn) name:@"endLoginCount" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"backselected1"  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(backselected1) name:@"backselected1" object:nil];
     
@@ -147,8 +149,8 @@
     selectImage = [UIImage imageNamed:@"service"];
     serviceNav.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"会话" image:[normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
-    docMy=[[DocMyViewController alloc] init];
-    myNav = [[UINavigationController alloc] initWithRootViewController:docMy];
+    my=[[MDMyViewController alloc] init];
+    myNav = [[UINavigationController alloc] initWithRootViewController:my];
     normalImage = [UIImage imageNamed:@"myback"];
     selectImage = [UIImage imageNamed:@"my"];
     myNav.tabBarItem=[[UITabBarItem alloc] initWithTitle:@"我的" image:[normalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];

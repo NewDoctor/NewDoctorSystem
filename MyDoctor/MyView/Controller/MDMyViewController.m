@@ -24,6 +24,7 @@
 #import "MDMyFocusViewController.h"
 #import "GTMBase64.h"
 #import "MDSetViewController.h"
+#import "DocMyPatientsViewController.h"
 
 @interface MDMyViewController ()<UITableViewDataSource,UITableViewDelegate,sendInfoToCtr>
 {
@@ -33,6 +34,7 @@
     NSString * headImg;
     NSString * name;
     UILabel * userName;
+    
 }
 
 @property (nonatomic,strong) NSMutableArray * dataList;
@@ -51,7 +53,7 @@
         
         MDMyViewItem * group2 = [MDMyViewItem itemsWithIcon:@"feedback" andTitle:@"意见反馈" andRightImage:@"arrow"];
         
-        MDMyViewItem * group3 = [MDMyViewItem itemsWithIcon:@"mydoctor" andTitle:@"我的关注" andRightImage:@"arrow"];
+        MDMyViewItem * group3 = [MDMyViewItem itemsWithIcon:@"mydoctor" andTitle:@"我的患者" andRightImage:@"arrow"];
         
 
         
@@ -281,33 +283,17 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.section == 1) {
-//        MDServiceViewController * serviceVc = [[MDServiceViewController alloc] init];
-//        serviceVc.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:serviceVc animated:YES];
-//    }
     if(indexPath.section == 0)
     {
-//        MDMyDoctorViewController * myDoctorVC = [[MDMyDoctorViewController alloc] init];
-//        myDoctorVC.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:myDoctorVC animated:YES];
-        MDMyFocusViewController * myFocusVC = [[MDMyFocusViewController alloc] init];
-        myFocusVC.title  =@"我的关注";
-        myFocusVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:myFocusVC animated:YES];
+        DocMyPatientsViewController * myPatientsVC = [[DocMyPatientsViewController alloc] init];
+        myPatientsVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:myPatientsVC animated:YES];
     }
-//    else if (indexPath.section == 2)
-//    {
-//        MDFeedBackViewController * feedBackVC = [[MDFeedBackViewController alloc] init];
-//        feedBackVC.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:feedBackVC animated:YES];
-//    }
     else if (indexPath.section == 1)
     {
         MDFeedBackViewController * feedBackVC = [[MDFeedBackViewController alloc] init];
                 feedBackVC.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:feedBackVC animated:YES];
-
     }
 }
 

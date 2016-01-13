@@ -214,6 +214,7 @@
             }
         } onQueue:nil];
         
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"endLoginCount" object:self];
     }
 }
 

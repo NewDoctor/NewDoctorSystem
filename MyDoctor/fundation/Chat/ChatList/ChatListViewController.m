@@ -632,6 +632,8 @@
     }
     
     chatController.delelgate = self;
+    chatController.hidesBottomBarWhenPushed = YES;
+
     [self.navigationController pushViewController:chatController animated:YES];
 }
 

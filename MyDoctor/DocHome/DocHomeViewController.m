@@ -46,7 +46,7 @@
     
     if (!bar) {
         bar = [[WbToolBarFour alloc] initWithFrame:CGRectMake(0, 64, appWidth, 40)];
-        bar.dataSource = [[NSArray alloc] initWithObjects:@"全部",@"电话咨询",@"未完成", nil];
+        bar.dataSource = [[NSArray alloc] initWithObjects:@"未完成",@"已完成",@"通话记录", nil];
         bar.delegate = self;
         [bar drawFristRect:CGRectMake(0, 64, appWidth, 40)];
         [self.view addSubview:bar];

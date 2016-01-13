@@ -130,7 +130,7 @@
     _tabBarController = [[UITabBarController alloc] init];
     _tabBarController.delegate = self;
     _tabBarController.tabBar.backgroundImage = nil;
-    _tabBarController.tabBar.backgroundColor = [UIColor clearColor];
+    _tabBarController.tabBar.backgroundColor = [UIColor whiteColor];
     _tabBarController.tabBar.selectedImageTintColor = [UIColor colorWithRed:14/255.0 green:194/255.0 blue:14/255.0 alpha:1];
     
     docHome=[[DocHomeViewController alloc] init];

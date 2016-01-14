@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GeTuiSdk.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate>
+/// 个推开发者网站中申请App时注册的AppId、AppKey、AppSecret
+#define kGtAppId           @"lZTx6vCP65A6Mb7Jo5asC"
+#define kGtAppKey          @"W8mSnrTZFW7EU9T98O2SU6"
+#define kGtAppSecret       @"IThSX5nTYI8hIHrBXHAaz9"
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate,GeTuiSdkDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) UITabBarController *tabBarController;

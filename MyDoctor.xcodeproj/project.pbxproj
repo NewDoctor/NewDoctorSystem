@@ -80,6 +80,22 @@
 		155CEC481C0E8993006B5CFA /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 155CEC461C0E8993006B5CFA /* GTMBase64.m */; };
 		156263071C293C8E00B725EF /* MyDoctor.c in Sources */ = {isa = PBXBuildFile; fileRef = 156263051C293C8E00B725EF /* MyDoctor.c */; };
 		1578343C1C20051E00421167 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1578343B1C20051E00421167 /* FileUtils.m */; };
+		15800EC61C479B4700FCB87B /* callRing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15800EC31C479B4700FCB87B /* callRing.mp3 */; };
+		15800EC71C479B4700FCB87B /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800EC51C479B4700FCB87B /* CallViewController.m */; };
+		15800ECF1C479B8600FCB87B /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800ECC1C479B8600FCB87B /* ChineseToPinyin.m */; };
+		15800ED01C479B8600FCB87B /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800ECE1C479B8600FCB87B /* ContactsViewController.m */; };
+		15800ED31C479B9F00FCB87B /* RealtimeSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800ED21C479B9F00FCB87B /* RealtimeSearchUtil.m */; };
+		15800EDC1C479BB800FCB87B /* AddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800ED51C479BB800FCB87B /* AddFriendCell.m */; };
+		15800EDD1C479BB800FCB87B /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800ED71C479BB800FCB87B /* AddFriendViewController.m */; };
+		15800EDE1C479BB800FCB87B /* ApplyFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800ED91C479BB800FCB87B /* ApplyFriendCell.m */; };
+		15800EDF1C479BB800FCB87B /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800EDB1C479BB800FCB87B /* ApplyViewController.m */; };
+		15800EF71C479BE600FCB87B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800EF61C479BE600FCB87B /* MainViewController.m */; };
+		15800F1C1C479C4F00FCB87B /* BlackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800F101C479C4F00FCB87B /* BlackListViewController.m */; };
+		15800F1D1C479C4F00FCB87B /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800F121C479C4F00FCB87B /* DebugViewController.m */; };
+		15800F1E1C479C4F00FCB87B /* EditNicknameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800F141C479C4F00FCB87B /* EditNicknameViewController.m */; };
+		15800F1F1C479C4F00FCB87B /* PushNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800F161C479C4F00FCB87B /* PushNotificationViewController.m */; };
+		15800F201C479C4F00FCB87B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800F181C479C4F00FCB87B /* SettingsViewController.m */; };
+		15800F211C479C4F00FCB87B /* UserProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800F1A1C479C4F00FCB87B /* UserProfileEditViewController.m */; };
 		159049721C069FA600EE51FB /* BRSlogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159049671C069FA600EE51FB /* BRSlogInViewController.m */; };
 		159049731C069FA600EE51FB /* BRSNewPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159049691C069FA600EE51FB /* BRSNewPageViewController.m */; };
 		159049741C069FA600EE51FB /* BRSNewPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1590496B1C069FA600EE51FB /* BRSNewPasswordViewController.m */; };
@@ -193,22 +209,6 @@
 		6A6C99D81C477D5400643C97 /* MDUserVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99D51C477D5400643C97 /* MDUserVO.m */; };
 		6A6C99D91C477D5400643C97 /* MDMyViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99D71C477D5400643C97 /* MDMyViewItem.m */; };
 		6A6C99DC1C477FD900643C97 /* MDnoticeCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99DB1C477FD900643C97 /* MDnoticeCenterCell.m */; };
-		6A6C9A011C47843200643C97 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99DE1C47843200643C97 /* MainViewController.m */; };
-		6A6C9A021C47843200643C97 /* callRing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A6C99DF1C47843200643C97 /* callRing.mp3 */; };
-		6A6C9A031C47843200643C97 /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99E11C47843200643C97 /* CallViewController.m */; };
-		6A6C9A041C47843200643C97 /* BlackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99E41C47843200643C97 /* BlackListViewController.m */; };
-		6A6C9A051C47843200643C97 /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99E61C47843200643C97 /* DebugViewController.m */; };
-		6A6C9A061C47843200643C97 /* EditNicknameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99E81C47843200643C97 /* EditNicknameViewController.m */; };
-		6A6C9A071C47843200643C97 /* PushNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99EA1C47843200643C97 /* PushNotificationViewController.m */; };
-		6A6C9A081C47843200643C97 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99EC1C47843200643C97 /* SettingsViewController.m */; };
-		6A6C9A091C47843200643C97 /* UserProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99EE1C47843200643C97 /* UserProfileEditViewController.m */; };
-		6A6C9A0A1C47843200643C97 /* RealtimeSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99F11C47843200643C97 /* RealtimeSearchUtil.m */; };
-		6A6C9A0B1C47843200643C97 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99F31C47843200643C97 /* ChineseToPinyin.m */; };
-		6A6C9A0C1C47843200643C97 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99F51C47843200643C97 /* ContactsViewController.m */; };
-		6A6C9A0D1C47843200643C97 /* AddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99F71C47843200643C97 /* AddFriendCell.m */; };
-		6A6C9A0E1C47843200643C97 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99F91C47843200643C97 /* AddFriendViewController.m */; };
-		6A6C9A0F1C47843200643C97 /* ApplyFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99FB1C47843200643C97 /* ApplyFriendCell.m */; };
-		6A6C9A101C47843200643C97 /* ApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C99FD1C47843200643C97 /* ApplyViewController.m */; };
 		6AB9B1341C2013D0004BF6A7 /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9B12A1C2013D0004BF6A7 /* 123.jpg */; };
 		6AB9B1351C2013D0004BF6A7 /* 456.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9B12B1C2013D0004BF6A7 /* 456.jpg */; };
 		6AB9B1361C2013D0004BF6A7 /* 789.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9B12C1C2013D0004BF6A7 /* 789.jpg */; };
@@ -710,6 +710,37 @@
 		156263061C293C8E00B725EF /* MyDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDoctor.h; sourceTree = "<group>"; };
 		1578343A1C20051E00421167 /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileUtils.h; path = FileUtils/FileUtils.h; sourceTree = "<group>"; };
 		1578343B1C20051E00421167 /* FileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileUtils.m; path = FileUtils/FileUtils.m; sourceTree = "<group>"; };
+		15800EC31C479B4700FCB87B /* callRing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = callRing.mp3; sourceTree = "<group>"; };
+		15800EC41C479B4700FCB87B /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
+		15800EC51C479B4700FCB87B /* CallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
+		15800ECB1C479B8600FCB87B /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
+		15800ECC1C479B8600FCB87B /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
+		15800ECD1C479B8600FCB87B /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		15800ECE1C479B8600FCB87B /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		15800ED11C479B9F00FCB87B /* RealtimeSearchUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealtimeSearchUtil.h; sourceTree = "<group>"; };
+		15800ED21C479B9F00FCB87B /* RealtimeSearchUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeSearchUtil.m; sourceTree = "<group>"; };
+		15800ED41C479BB800FCB87B /* AddFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendCell.h; sourceTree = "<group>"; };
+		15800ED51C479BB800FCB87B /* AddFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendCell.m; sourceTree = "<group>"; };
+		15800ED61C479BB800FCB87B /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		15800ED71C479BB800FCB87B /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
+		15800ED81C479BB800FCB87B /* ApplyFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyFriendCell.h; sourceTree = "<group>"; };
+		15800ED91C479BB800FCB87B /* ApplyFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyFriendCell.m; sourceTree = "<group>"; };
+		15800EDA1C479BB800FCB87B /* ApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyViewController.h; sourceTree = "<group>"; };
+		15800EDB1C479BB800FCB87B /* ApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyViewController.m; sourceTree = "<group>"; };
+		15800EF51C479BE600FCB87B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		15800EF61C479BE600FCB87B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		15800F0F1C479C4F00FCB87B /* BlackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackListViewController.h; sourceTree = "<group>"; };
+		15800F101C479C4F00FCB87B /* BlackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackListViewController.m; sourceTree = "<group>"; };
+		15800F111C479C4F00FCB87B /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
+		15800F121C479C4F00FCB87B /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
+		15800F131C479C4F00FCB87B /* EditNicknameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNicknameViewController.h; sourceTree = "<group>"; };
+		15800F141C479C4F00FCB87B /* EditNicknameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNicknameViewController.m; sourceTree = "<group>"; };
+		15800F151C479C4F00FCB87B /* PushNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotificationViewController.h; sourceTree = "<group>"; };
+		15800F161C479C4F00FCB87B /* PushNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationViewController.m; sourceTree = "<group>"; };
+		15800F171C479C4F00FCB87B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		15800F181C479C4F00FCB87B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		15800F191C479C4F00FCB87B /* UserProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileEditViewController.h; sourceTree = "<group>"; };
+		15800F1A1C479C4F00FCB87B /* UserProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileEditViewController.m; sourceTree = "<group>"; };
 		159049661C069FA600EE51FB /* BRSlogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSlogInViewController.h; sourceTree = "<group>"; };
 		159049671C069FA600EE51FB /* BRSlogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSlogInViewController.m; sourceTree = "<group>"; };
 		159049681C069FA600EE51FB /* BRSNewPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSNewPageViewController.h; sourceTree = "<group>"; };
@@ -971,37 +1002,6 @@
 		6A6C99D71C477D5400643C97 /* MDMyViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDMyViewItem.m; sourceTree = "<group>"; };
 		6A6C99DA1C477FD900643C97 /* MDnoticeCenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDnoticeCenterCell.h; sourceTree = "<group>"; };
 		6A6C99DB1C477FD900643C97 /* MDnoticeCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDnoticeCenterCell.m; sourceTree = "<group>"; };
-		6A6C99DD1C47843200643C97 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		6A6C99DE1C47843200643C97 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		6A6C99DF1C47843200643C97 /* callRing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = callRing.mp3; sourceTree = "<group>"; };
-		6A6C99E01C47843200643C97 /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
-		6A6C99E11C47843200643C97 /* CallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
-		6A6C99E31C47843200643C97 /* BlackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackListViewController.h; sourceTree = "<group>"; };
-		6A6C99E41C47843200643C97 /* BlackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackListViewController.m; sourceTree = "<group>"; };
-		6A6C99E51C47843200643C97 /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
-		6A6C99E61C47843200643C97 /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
-		6A6C99E71C47843200643C97 /* EditNicknameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNicknameViewController.h; sourceTree = "<group>"; };
-		6A6C99E81C47843200643C97 /* EditNicknameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNicknameViewController.m; sourceTree = "<group>"; };
-		6A6C99E91C47843200643C97 /* PushNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotificationViewController.h; sourceTree = "<group>"; };
-		6A6C99EA1C47843200643C97 /* PushNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotificationViewController.m; sourceTree = "<group>"; };
-		6A6C99EB1C47843200643C97 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		6A6C99EC1C47843200643C97 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		6A6C99ED1C47843200643C97 /* UserProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileEditViewController.h; sourceTree = "<group>"; };
-		6A6C99EE1C47843200643C97 /* UserProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileEditViewController.m; sourceTree = "<group>"; };
-		6A6C99F01C47843200643C97 /* RealtimeSearchUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealtimeSearchUtil.h; sourceTree = "<group>"; };
-		6A6C99F11C47843200643C97 /* RealtimeSearchUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealtimeSearchUtil.m; sourceTree = "<group>"; };
-		6A6C99F21C47843200643C97 /* ChineseToPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyin.h; sourceTree = "<group>"; };
-		6A6C99F31C47843200643C97 /* ChineseToPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyin.m; sourceTree = "<group>"; };
-		6A6C99F41C47843200643C97 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
-		6A6C99F51C47843200643C97 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
-		6A6C99F61C47843200643C97 /* AddFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendCell.h; sourceTree = "<group>"; };
-		6A6C99F71C47843200643C97 /* AddFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendCell.m; sourceTree = "<group>"; };
-		6A6C99F81C47843200643C97 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
-		6A6C99F91C47843200643C97 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
-		6A6C99FA1C47843200643C97 /* ApplyFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyFriendCell.h; sourceTree = "<group>"; };
-		6A6C99FB1C47843200643C97 /* ApplyFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyFriendCell.m; sourceTree = "<group>"; };
-		6A6C99FC1C47843200643C97 /* ApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyViewController.h; sourceTree = "<group>"; };
-		6A6C99FD1C47843200643C97 /* ApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyViewController.m; sourceTree = "<group>"; };
 		6AB9B12A1C2013D0004BF6A7 /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 123.jpg; path = "临时头像/123.jpg"; sourceTree = "<group>"; };
 		6AB9B12B1C2013D0004BF6A7 /* 456.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 456.jpg; path = "临时头像/456.jpg"; sourceTree = "<group>"; };
 		6AB9B12C1C2013D0004BF6A7 /* 789.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 789.jpg; path = "临时头像/789.jpg"; sourceTree = "<group>"; };
@@ -1907,6 +1907,76 @@
 			name = FileUtils;
 			sourceTree = "<group>";
 		};
+		15800E8C1C479B3400FCB87B /* DocChatView */ = {
+			isa = PBXGroup;
+			children = (
+				15800EF51C479BE600FCB87B /* MainViewController.h */,
+				15800EF61C479BE600FCB87B /* MainViewController.m */,
+				15800E8D1C479B3400FCB87B /* Call */,
+				15800E911C479B3400FCB87B /* Contacts */,
+				15800EA31C479B3400FCB87B /* Settings */,
+			);
+			path = DocChatView;
+			sourceTree = "<group>";
+		};
+		15800E8D1C479B3400FCB87B /* Call */ = {
+			isa = PBXGroup;
+			children = (
+				15800EC31C479B4700FCB87B /* callRing.mp3 */,
+				15800EC41C479B4700FCB87B /* CallViewController.h */,
+				15800EC51C479B4700FCB87B /* CallViewController.m */,
+			);
+			path = Call;
+			sourceTree = "<group>";
+		};
+		15800E911C479B3400FCB87B /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				15800ED11C479B9F00FCB87B /* RealtimeSearchUtil.h */,
+				15800ED21C479B9F00FCB87B /* RealtimeSearchUtil.m */,
+				15800ECB1C479B8600FCB87B /* ChineseToPinyin.h */,
+				15800ECC1C479B8600FCB87B /* ChineseToPinyin.m */,
+				15800ECD1C479B8600FCB87B /* ContactsViewController.h */,
+				15800ECE1C479B8600FCB87B /* ContactsViewController.m */,
+				15800E961C479B3400FCB87B /* FriendApply */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		15800E961C479B3400FCB87B /* FriendApply */ = {
+			isa = PBXGroup;
+			children = (
+				15800ED41C479BB800FCB87B /* AddFriendCell.h */,
+				15800ED51C479BB800FCB87B /* AddFriendCell.m */,
+				15800ED61C479BB800FCB87B /* AddFriendViewController.h */,
+				15800ED71C479BB800FCB87B /* AddFriendViewController.m */,
+				15800ED81C479BB800FCB87B /* ApplyFriendCell.h */,
+				15800ED91C479BB800FCB87B /* ApplyFriendCell.m */,
+				15800EDA1C479BB800FCB87B /* ApplyViewController.h */,
+				15800EDB1C479BB800FCB87B /* ApplyViewController.m */,
+			);
+			path = FriendApply;
+			sourceTree = "<group>";
+		};
+		15800EA31C479B3400FCB87B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				15800F0F1C479C4F00FCB87B /* BlackListViewController.h */,
+				15800F101C479C4F00FCB87B /* BlackListViewController.m */,
+				15800F111C479C4F00FCB87B /* DebugViewController.h */,
+				15800F121C479C4F00FCB87B /* DebugViewController.m */,
+				15800F131C479C4F00FCB87B /* EditNicknameViewController.h */,
+				15800F141C479C4F00FCB87B /* EditNicknameViewController.m */,
+				15800F151C479C4F00FCB87B /* PushNotificationViewController.h */,
+				15800F161C479C4F00FCB87B /* PushNotificationViewController.m */,
+				15800F171C479C4F00FCB87B /* SettingsViewController.h */,
+				15800F181C479C4F00FCB87B /* SettingsViewController.m */,
+				15800F191C479C4F00FCB87B /* UserProfileEditViewController.h */,
+				15800F1A1C479C4F00FCB87B /* UserProfileEditViewController.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		159049651C069FA600EE51FB /* logIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -2376,7 +2446,7 @@
 		6A6C98F71C47789100643C97 /* DocHome */ = {
 			isa = PBXGroup;
 			children = (
-				6A6C9A001C47843200643C97 /* DocChatView */,
+				15800E8C1C479B3400FCB87B /* DocChatView */,
 				6A6C98F81C47789100643C97 /* Controller */,
 				6A6C99311C47789200643C97 /* Model */,
 				6A6C99371C47789200643C97 /* View */,
@@ -2493,77 +2563,6 @@
 				6A6C99CE1C477B7A00643C97 /* DocMyPatientsCell.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		6A6C99E21C47843200643C97 /* Call */ = {
-			isa = PBXGroup;
-			children = (
-				6A6C99DF1C47843200643C97 /* callRing.mp3 */,
-				6A6C99E01C47843200643C97 /* CallViewController.h */,
-				6A6C99E11C47843200643C97 /* CallViewController.m */,
-			);
-			path = Call;
-			sourceTree = "<group>";
-		};
-		6A6C99EF1C47843200643C97 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				6A6C99E31C47843200643C97 /* BlackListViewController.h */,
-				6A6C99E41C47843200643C97 /* BlackListViewController.m */,
-				6A6C99E51C47843200643C97 /* DebugViewController.h */,
-				6A6C99E61C47843200643C97 /* DebugViewController.m */,
-				6A6C99E71C47843200643C97 /* EditNicknameViewController.h */,
-				6A6C99E81C47843200643C97 /* EditNicknameViewController.m */,
-				6A6C99E91C47843200643C97 /* PushNotificationViewController.h */,
-				6A6C99EA1C47843200643C97 /* PushNotificationViewController.m */,
-				6A6C99EB1C47843200643C97 /* SettingsViewController.h */,
-				6A6C99EC1C47843200643C97 /* SettingsViewController.m */,
-				6A6C99ED1C47843200643C97 /* UserProfileEditViewController.h */,
-				6A6C99EE1C47843200643C97 /* UserProfileEditViewController.m */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		6A6C99FE1C47843200643C97 /* FriendApply */ = {
-			isa = PBXGroup;
-			children = (
-				6A6C99F61C47843200643C97 /* AddFriendCell.h */,
-				6A6C99F71C47843200643C97 /* AddFriendCell.m */,
-				6A6C99F81C47843200643C97 /* AddFriendViewController.h */,
-				6A6C99F91C47843200643C97 /* AddFriendViewController.m */,
-				6A6C99FA1C47843200643C97 /* ApplyFriendCell.h */,
-				6A6C99FB1C47843200643C97 /* ApplyFriendCell.m */,
-				6A6C99FC1C47843200643C97 /* ApplyViewController.h */,
-				6A6C99FD1C47843200643C97 /* ApplyViewController.m */,
-			);
-			path = FriendApply;
-			sourceTree = "<group>";
-		};
-		6A6C99FF1C47843200643C97 /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
-				6A6C99F01C47843200643C97 /* RealtimeSearchUtil.h */,
-				6A6C99F11C47843200643C97 /* RealtimeSearchUtil.m */,
-				6A6C99F21C47843200643C97 /* ChineseToPinyin.h */,
-				6A6C99F31C47843200643C97 /* ChineseToPinyin.m */,
-				6A6C99F41C47843200643C97 /* ContactsViewController.h */,
-				6A6C99F51C47843200643C97 /* ContactsViewController.m */,
-				6A6C99FE1C47843200643C97 /* FriendApply */,
-			);
-			path = Contacts;
-			sourceTree = "<group>";
-		};
-		6A6C9A001C47843200643C97 /* DocChatView */ = {
-			isa = PBXGroup;
-			children = (
-				6A6C99DD1C47843200643C97 /* MainViewController.h */,
-				6A6C99DE1C47843200643C97 /* MainViewController.m */,
-				6A6C99E21C47843200643C97 /* Call */,
-				6A6C99EF1C47843200643C97 /* Settings */,
-				6A6C99FF1C47843200643C97 /* Contacts */,
-			);
-			name = DocChatView;
-			path = "../../../TheDoctorSystem副本/MyDoctor/DocHome/DocChatView";
 			sourceTree = "<group>";
 		};
 		6A8F12B01C040825001ABE2F /* Other */ = {
@@ -3881,7 +3880,7 @@
 				15CFF0061C3A397900DB6FAC /* Default-568h@2x.png in Resources */,
 				6AB9BC681C2BEC46004BF6A7 /* chatBar_more_face.png in Resources */,
 				6A45AAB61C152AB400555CF9 /* 赞@3x.png in Resources */,
-				6A6C9A021C47843200643C97 /* callRing.mp3 in Resources */,
+				15800EC61C479B4700FCB87B /* callRing.mp3 in Resources */,
 				155CEBFC1C0D880C006B5CFA /* 箭头@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3903,8 +3902,8 @@
 				154168E81C34BB0500A69A7D /* AFURLSessionManager.m in Sources */,
 				6AB9BADC1C2BE348004BF6A7 /* PSTGridLayoutRow.m in Sources */,
 				6AB9BAB11C2BE32C004BF6A7 /* UIImage+EMWebP.m in Sources */,
-				6A6C9A031C47843200643C97 /* CallViewController.m in Sources */,
 				1590497D1C06A71000EE51FB /* BRSEndSignlnViewController.m in Sources */,
+				15800F1C1C479C4F00FCB87B /* BlackListViewController.m in Sources */,
 				6AB9BAD61C2BE348004BF6A7 /* PSTCollectionViewFlowLayout.m in Sources */,
 				6A6C995E1C4778BC00643C97 /* DocHomeCell.m in Sources */,
 				6A6523461C1E930E00227C63 /* SDWebImageManager.m in Sources */,
@@ -3918,6 +3917,8 @@
 				6AB9BB691C2BE845004BF6A7 /* EMChatAudioBubbleView.m in Sources */,
 				6AB9BADB1C2BE348004BF6A7 /* PSTGridLayoutItem.m in Sources */,
 				6A6522881C1E8BAE00227C63 /* MDRequestModel.m in Sources */,
+				15800F211C479C4F00FCB87B /* UserProfileEditViewController.m in Sources */,
+				15800EDC1C479BB800FCB87B /* AddFriendCell.m in Sources */,
 				6AB9BB301C2BE79D004BF6A7 /* EMVoiceConverter.mm in Sources */,
 				15AE53751C02F0680013FF1B /* MDBaseViewController.m in Sources */,
 				159049771C069FA600EE51FB /* BRSTextField.m in Sources */,
@@ -3925,10 +3926,11 @@
 				153C1E8B1C0405FE00F87014 /* WBToolBar.m in Sources */,
 				154168E51C34BB0500A69A7D /* AFSecurityPolicy.m in Sources */,
 				6A6523481C1E930E00227C63 /* UIButton+WebCache.m in Sources */,
-				6A6C9A0C1C47843200643C97 /* ContactsViewController.m in Sources */,
 				6AB9BAAA1C2BE32C004BF6A7 /* EMSDWebImageManager.m in Sources */,
 				6AB9BA5E1C2BE28F004BF6A7 /* EmojiEmoticons.m in Sources */,
 				159049721C069FA600EE51FB /* BRSlogInViewController.m in Sources */,
+				15800ED01C479B8600FCB87B /* ContactsViewController.m in Sources */,
+				15800F1D1C479C4F00FCB87B /* DebugViewController.m in Sources */,
 				153C1E851C03FB8C00F87014 /* NSArray+MASAdditions.m in Sources */,
 				6AB9BB551C2BE80B004BF6A7 /* DXFaceView.m in Sources */,
 				154169A11C34CFAE00A69A7D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -3937,21 +3939,18 @@
 				6A6C99C71C477B5500643C97 /* MDMyViewController.m in Sources */,
 				6AB9B87A1C2BE095004BF6A7 /* UserProfileManager.m in Sources */,
 				6AB9BADA1C2BE348004BF6A7 /* PSTGridLayoutInfo.m in Sources */,
-				6A6C9A0B1C47843200643C97 /* ChineseToPinyin.m in Sources */,
 				153C1E821C03FB8C00F87014 /* MX_MASLayoutConstraint.m in Sources */,
 				153C1E871C03FB8C00F87014 /* View+MASAdditions.m in Sources */,
 				6AB9BAD91C2BE348004BF6A7 /* PSTCollectionViewUpdateItem.m in Sources */,
 				6AB9B8791C2BE095004BF6A7 /* InvitationManager.m in Sources */,
 				6AB9BB2C1C2BE78E004BF6A7 /* amrFileCodec.mm in Sources */,
 				6AB9BB6A1C2BE845004BF6A7 /* EMChatBaseBubbleView.m in Sources */,
-				6A6C9A0F1C47843200643C97 /* ApplyFriendCell.m in Sources */,
 				6AB9BAD31C2BE348004BF6A7 /* PSTCollectionViewCell.m in Sources */,
 				6AB9BA381C2BE23B004BF6A7 /* NSString+Valid.m in Sources */,
 				6AB9BB5C1C2BE82B004BF6A7 /* DXRecordView.m in Sources */,
 				6AB9BAAC1C2BE32C004BF6A7 /* MKAnnotationView+EMWebCache.m in Sources */,
 				6A6C99621C4778D100643C97 /* DocServiceFolerVO.m in Sources */,
 				6AB9BA3B1C2BE23B004BF6A7 /* UIViewController+DismissKeyboard.m in Sources */,
-				6A6C9A0A1C47843200643C97 /* RealtimeSearchUtil.m in Sources */,
 				6AB9BA391C2BE23B004BF6A7 /* UIImageView+HeadImage.m in Sources */,
 				6AB9BB761C2BE866004BF6A7 /* EMChatViewBaseCell.m in Sources */,
 				153C1E831C03FB8C00F87014 /* MX_MASViewAttribute.m in Sources */,
@@ -3961,6 +3960,7 @@
 				6AB9BAB31C2BE32C004BF6A7 /* UIImageView+EMWebCache.m in Sources */,
 				6AB9BA7D1C2BE2EC004BF6A7 /* MWPhotoBrowser.m in Sources */,
 				6AB9BA0C1C2BE1C0004BF6A7 /* RobotManager.m in Sources */,
+				15800F1F1C479C4F00FCB87B /* PushNotificationViewController.m in Sources */,
 				153C1E861C03FB8C00F87014 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				6A65234A1C1E930E00227C63 /* UIImage+MultiFormat.m in Sources */,
 				159049761C069FA600EE51FB /* BRSSignInViewController.m in Sources */,
@@ -3976,13 +3976,12 @@
 				6AB9BA651C2BE2D4004BF6A7 /* MBProgressHUD+Add.m in Sources */,
 				6AB9BB4A1C2BE7E7004BF6A7 /* ChatViewController.m in Sources */,
 				6AB9BB6B1C2BE845004BF6A7 /* EMChatImageBubbleView.m in Sources */,
-				6A6C9A0D1C47843200643C97 /* AddFriendCell.m in Sources */,
 				15FBDD641C155B11009E7E39 /* DocPatientFolerVO.m in Sources */,
 				6A6523451C1E930E00227C63 /* SDWebImageDownloaderOperation.m in Sources */,
 				15AE536F1C02F0680013FF1B /* main.m in Sources */,
 				6A6C997C1C47793200643C97 /* DocRecordViewController.m in Sources */,
-				6A6C9A041C47843200643C97 /* BlackListViewController.m in Sources */,
 				6AB9BA551C2BE25D004BF6A7 /* EMCDDeviceManagerBase.m in Sources */,
+				15800F1E1C479C4F00FCB87B /* EditNicknameViewController.m in Sources */,
 				6AB9BB241C2BE6E1004BF6A7 /* TTGlobalUICommon.m in Sources */,
 				6A6C99C41C477B5500643C97 /* DocMyViewController.m in Sources */,
 				6AB9BB801C2BE876004BF6A7 /* MessageReadManager.m in Sources */,
@@ -4000,7 +3999,6 @@
 				6AB9BAB21C2BE32C004BF6A7 /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				6AB9BB1E1C2BE6C1004BF6A7 /* SRSlimeView.m in Sources */,
 				153ED8431C083DB500171DFA /* KTSelectDatePicker.m in Sources */,
-				6A6C9A071C47843200643C97 /* PushNotificationViewController.m in Sources */,
 				153C1E801C03FB8C00F87014 /* MX_MASConstraint.m in Sources */,
 				15FBDD571C15583A009E7E39 /* DocAllPatientViewController.m in Sources */,
 				156263071C293C8E00B725EF /* MyDoctor.c in Sources */,
@@ -4009,7 +4007,9 @@
 				6AB9BA3C1C2BE23B004BF6A7 /* UIViewController+HUD.m in Sources */,
 				6AB9BA5D1C2BE28F004BF6A7 /* Emoji.m in Sources */,
 				6AB9BA371C2BE23B004BF6A7 /* NSDateFormatter+Category.m in Sources */,
+				15800F201C479C4F00FCB87B /* SettingsViewController.m in Sources */,
 				153ED8441C083DB500171DFA /* KTSelectPickerView.m in Sources */,
+				15800EDF1C479BB800FCB87B /* ApplyViewController.m in Sources */,
 				6A6C995F1C4778BC00643C97 /* DocHomeTableViewCell.m in Sources */,
 				6AB9BB561C2BE80B004BF6A7 /* FacialView.m in Sources */,
 				6AB9BA511C2BE25D004BF6A7 /* EMCDDeviceManager+Media.m in Sources */,
@@ -4031,9 +4031,7 @@
 				15FBDD5A1C155868009E7E39 /* DocUnfinishPatientViewController.m in Sources */,
 				6AB9BA241C2BE21F004BF6A7 /* BaseViewController.m in Sources */,
 				6AB9BAD81C2BE348004BF6A7 /* PSTCollectionViewLayout.m in Sources */,
-				6A6C9A091C47843200643C97 /* UserProfileEditViewController.m in Sources */,
 				6AB9BA831C2BE2FD004BF6A7 /* DACircularProgressView.m in Sources */,
-				6A6C9A081C47843200643C97 /* SettingsViewController.m in Sources */,
 				6AB9BAB01C2BE32C004BF6A7 /* UIImage+EMMultiFormat.m in Sources */,
 				6A65234D1C1E930E00227C63 /* UIImageView+WebCache.m in Sources */,
 				6AB9BB1D1C2BE6C1004BF6A7 /* SRRefreshView.m in Sources */,
@@ -4046,6 +4044,7 @@
 				6AB9BA791C2BE2EC004BF6A7 /* MWCaptionView.m in Sources */,
 				6AB9BA091C2BE1C0004BF6A7 /* EMRotbotChatViewCell.m in Sources */,
 				6A6C99D31C477D4A00643C97 /* MDUserInformationVO.m in Sources */,
+				15800EC71C479B4700FCB87B /* CallViewController.m in Sources */,
 				6AB9BB501C2BE7FB004BF6A7 /* DXMessageToolBar.m in Sources */,
 				1578343C1C20051E00421167 /* FileUtils.m in Sources */,
 				6A6523441C1E930E00227C63 /* SDWebImageDownloader.m in Sources */,
@@ -4054,13 +4053,12 @@
 				6A3EF8481C05BB1D00923D03 /* AppDelegate.m in Sources */,
 				6A6523B01C20085B00227C63 /* NIDropDown.m in Sources */,
 				6A6523401C1E930E00227C63 /* NSData+ImageContentType.m in Sources */,
-				6A6C9A061C47843200643C97 /* EditNicknameViewController.m in Sources */,
 				6AB9BA541C2BE25D004BF6A7 /* EMCDDeviceManager+Remind.m in Sources */,
 				6A6523421C1E930E00227C63 /* SDWebImageCompat.m in Sources */,
-				6A6C9A101C47843200643C97 /* ApplyViewController.m in Sources */,
 				154169A21C34CFAE00A69A7D /* UIButton+AFNetworking.m in Sources */,
 				159049731C069FA600EE51FB /* BRSNewPageViewController.m in Sources */,
 				15FBDD541C1557CB009E7E39 /* DocPatientViewController.m in Sources */,
+				15800EF71C479BE600FCB87B /* MainViewController.m in Sources */,
 				6AB9BA151C2BE1E8004BF6A7 /* EMTextView.m in Sources */,
 				6AB9BA531C2BE25D004BF6A7 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				6A6C99C51C477B5500643C97 /* MDDataViewController.m in Sources */,
@@ -4068,7 +4066,9 @@
 				154169A41C34CFAE00A69A7D /* UIProgressView+AFNetworking.m in Sources */,
 				6AB9BAA81C2BE32C004BF6A7 /* EMSDWebImageDownloader.m in Sources */,
 				6AB9BAD21C2BE348004BF6A7 /* PSTCollectionView.m in Sources */,
+				15800ED31C479B9F00FCB87B /* RealtimeSearchUtil.m in Sources */,
 				6AB9BB2D1C2BE78E004BF6A7 /* wav.mm in Sources */,
+				15800EDD1C479BB800FCB87B /* AddFriendViewController.m in Sources */,
 				6AB9BB3E1C2BE7D6004BF6A7 /* ChatListViewController.m in Sources */,
 				6AB9BB7F1C2BE876004BF6A7 /* MessageModelManager.m in Sources */,
 				6AB9BB4D1C2BE7E7004BF6A7 /* LocationViewController.m in Sources */,
@@ -4082,8 +4082,10 @@
 				6A6C99801C47793200643C97 /* MDNurseRootViewController.m in Sources */,
 				6AB9BA261C2BE21F004BF6A7 /* EMNavigationController.m in Sources */,
 				6AB9BAAE1C2BE32C004BF6A7 /* UIButton+EMWebCache.m in Sources */,
+				15800ECF1C479B8600FCB87B /* ChineseToPinyin.m in Sources */,
 				6AB9BA7A1C2BE2EC004BF6A7 /* MWGridCell.m in Sources */,
 				6A6C997E1C47793200643C97 /* MDnoticeCenterController.m in Sources */,
+				15800EDE1C479BB800FCB87B /* ApplyFriendCell.m in Sources */,
 				6AB9BA271C2BE21F004BF6A7 /* EMSearchDisplayController.m in Sources */,
 				6AB9BAB41C2BE32C004BF6A7 /* UIView+EMWebCacheOperation.m in Sources */,
 				154169A61C34CFAE00A69A7D /* UIWebView+AFNetworking.m in Sources */,
@@ -4092,7 +4094,6 @@
 				6AB9BADD1C2BE348004BF6A7 /* PSTGridLayoutSection.m in Sources */,
 				6A6523471C1E930E00227C63 /* SDWebImagePrefetcher.m in Sources */,
 				6AB9BAA91C2BE32C004BF6A7 /* EMSDWebImageDownloaderOperation.m in Sources */,
-				6A6C9A051C47843200643C97 /* DebugViewController.m in Sources */,
 				6A6522181C1ACDED00227C63 /* AdView.m in Sources */,
 				6AB9BA141C2BE1E8004BF6A7 /* EMSearchBar.m in Sources */,
 				6AF202641C0C4CDD00933EAF /* UIView+ViewExtension.m in Sources */,
@@ -4102,11 +4103,9 @@
 				6AB9BAD51C2BE348004BF6A7 /* PSTCollectionViewData.m in Sources */,
 				154168E41C34BB0500A69A7D /* AFNetworkReachabilityManager.m in Sources */,
 				6AB9BA641C2BE2D4004BF6A7 /* MBProgressHUD.m in Sources */,
-				6A6C9A011C47843200643C97 /* MainViewController.m in Sources */,
 				6A6C99C31C477B5500643C97 /* DocMyPatientsViewController.m in Sources */,
 				1532A6FC1C3F83A200D0582B /* FMDatabasePool.m in Sources */,
 				6A65234C1C1E930E00227C63 /* UIImageView+HighlightedWebCache.m in Sources */,
-				6A6C9A0E1C47843200643C97 /* AddFriendViewController.m in Sources */,
 				159049741C069FA600EE51FB /* BRSNewPasswordViewController.m in Sources */,
 				1532A6FB1C3F83A200D0582B /* FMDatabaseAdditions.m in Sources */,
 				6A6C99CB1C477B6A00643C97 /* DocMyPatientsModel.m in Sources */,

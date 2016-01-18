@@ -41,7 +41,7 @@
     UITextField * password;
     UITextField * password2;
     UITextField * IdNumber;
-//    UITextField * village;
+    //    UITextField * village;
     UITextField * housenumber;
     
     UITextField *sexField;
@@ -63,7 +63,7 @@
     UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Actiondo2)];
     [self.view addGestureRecognizer:tapGesture];
     [self textfield];
-   
+    
     [self setNavigationBarWithrightBtn:nil leftBtn:@"navigationbar_back"];
     //返回按钮点击
     [self.leftBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
@@ -86,17 +86,17 @@
     number.placeholder=@"名字";
     number.leftViewMode = UITextFieldViewModeAlways;
     
-//    IdNumber = [[UITextField alloc] init];
-//    [IdNumber setBorderStyle:UITextBorderStyleLine]; //外框类型
-//    IdNumber.returnKeyType = UIReturnKeyNext;  //键盘返回类型
-//    IdNumber.delegate = self;
-//    IdNumber.keyboardType = UIKeyboardTypeNumberPad;//键盘显示类型
-//    IdNumber.tag=22;
-//    IdNumber.placeholder=@"身份证号";
-//    IdNumber.backgroundColor=[UIColor whiteColor];
-//    IdNumber.leftViewMode = UITextFieldViewModeAlways;
-//    IdNumber.layer.borderColor=[[UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1]CGColor];
-//    IdNumber.layer.borderWidth= 1.0f;
+    //    IdNumber = [[UITextField alloc] init];
+    //    [IdNumber setBorderStyle:UITextBorderStyleLine]; //外框类型
+    //    IdNumber.returnKeyType = UIReturnKeyNext;  //键盘返回类型
+    //    IdNumber.delegate = self;
+    //    IdNumber.keyboardType = UIKeyboardTypeNumberPad;//键盘显示类型
+    //    IdNumber.tag=22;
+    //    IdNumber.placeholder=@"身份证号";
+    //    IdNumber.backgroundColor=[UIColor whiteColor];
+    //    IdNumber.leftViewMode = UITextFieldViewModeAlways;
+    //    IdNumber.layer.borderColor=[[UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1]CGColor];
+    //    IdNumber.layer.borderWidth= 1.0f;
     
     password = [[UITextField alloc] init];
     [password setBorderStyle:UITextBorderStyleLine]; //外框类型
@@ -127,40 +127,40 @@
     [self.rightBtn addTarget:self action:@selector(next:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:number];
-//    [self.view addSubview:IdNumber];
+    //    [self.view addSubview:IdNumber];
     [self.view addSubview:password];
     [self.view addSubview:password2];
     
     
     
-//    sexField = [[UITextField alloc] init];
-//    [sexField setBorderStyle:UITextBorderStyleLine]; //外框类型
-//    
-//    sexField.returnKeyType = UIReturnKeyNext;  //键盘返回类型
-//    sexField.delegate = self;
-//    sexField.keyboardType = UIKeyboardTypeDefault;//键盘显示类型
-//    sexField.tag=1;
-//    sexField.backgroundColor=[UIColor whiteColor];
-//    sexField.layer.borderColor=[[UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1]CGColor];
-//    sexField.layer.borderWidth= 1.0f;
-//    sexField.placeholder=@"性别";
-//    sexField.leftViewMode = UITextFieldViewModeAlways;
-//    [self.view addSubview:sexField];
-//    
-//    maleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [maleButton setImage:[UIImage imageNamed:@"绿色单选"] forState:UIControlStateNormal];
-//    [maleButton setTitle:@"男性" forState:UIControlStateNormal];
-//    [maleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-//    [self.view addSubview:maleButton];
-//    [maleButton addTarget:self action:@selector(maleSelect) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    femaleButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [femaleButton setImage:[UIImage imageNamed:@"灰色单选"] forState:UIControlStateNormal];
-//    [femaleButton setTitle:@"女性" forState:UIControlStateNormal];
-//    [femaleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-//    [self.view addSubview:femaleButton];
-//    [femaleButton addTarget:self action:@selector(femaleSelect) forControlEvents:UIControlEventTouchUpInside];
-
+    //    sexField = [[UITextField alloc] init];
+    //    [sexField setBorderStyle:UITextBorderStyleLine]; //外框类型
+    //
+    //    sexField.returnKeyType = UIReturnKeyNext;  //键盘返回类型
+    //    sexField.delegate = self;
+    //    sexField.keyboardType = UIKeyboardTypeDefault;//键盘显示类型
+    //    sexField.tag=1;
+    //    sexField.backgroundColor=[UIColor whiteColor];
+    //    sexField.layer.borderColor=[[UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1]CGColor];
+    //    sexField.layer.borderWidth= 1.0f;
+    //    sexField.placeholder=@"性别";
+    //    sexField.leftViewMode = UITextFieldViewModeAlways;
+    //    [self.view addSubview:sexField];
+    //
+    //    maleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [maleButton setImage:[UIImage imageNamed:@"绿色单选"] forState:UIControlStateNormal];
+    //    [maleButton setTitle:@"男性" forState:UIControlStateNormal];
+    //    [maleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    //    [self.view addSubview:maleButton];
+    //    [maleButton addTarget:self action:@selector(maleSelect) forControlEvents:UIControlEventTouchUpInside];
+    //
+    //    femaleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [femaleButton setImage:[UIImage imageNamed:@"灰色单选"] forState:UIControlStateNormal];
+    //    [femaleButton setTitle:@"女性" forState:UIControlStateNormal];
+    //    [femaleButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    //    [self.view addSubview:femaleButton];
+    //    [femaleButton addTarget:self action:@selector(femaleSelect) forControlEvents:UIControlEventTouchUpInside];
+    
     [number mas_makeConstraints:^(MX_MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX);
         make.top.equalTo(self.view.mas_top).with.offset(85);
@@ -168,35 +168,35 @@
         make.right.equalTo(self.view.mas_right).with.offset(-15);
         make.height.mas_equalTo(40);
     }];
-//    [sexField mas_makeConstraints:^(MX_MASConstraintMaker *make) {
-//        make.top.equalTo(self.view.mas_top).with.offset(135);
-//        make.left.equalTo(self.view.mas_left).with.offset(15);
-//        make.right.equalTo(self.view.mas_right).with.offset(-15);
-//        make.height.mas_equalTo(40);
-//    }];
-//    
-//    [maleButton mas_makeConstraints:^(MX_MASConstraintMaker *make) {
-//        make.left.equalTo(self.view.mas_left).with.offset(40+15);
-//        make.top.equalTo(self.view.mas_top).with.offset(135);
-////        make.bottom.equalTo(sexField.mas_bottom).with.offset(0);
-//        make.size.mas_equalTo(CGSizeMake(80, 40));
-//    }];
-//    
-//    [femaleButton mas_makeConstraints:^(MX_MASConstraintMaker *make) {
-//        make.left.equalTo(self.view.mas_left).with.offset(120+15);
-//        make.size.mas_equalTo(CGSizeMake(80, 40));
-//        make.top.equalTo(self.view.mas_top).with.offset(135);
-////        make.bottom.equalTo(sexField.mas_bottom).with.offset(0);
-//    }];
-//    
-//    
-//    [IdNumber mas_makeConstraints:^(MX_MASConstraintMaker *make) {
-//        make.centerX.equalTo(self.view.mas_centerX);
-//        make.top.equalTo(self.view.mas_top).with.offset(185);
-//        make.left.equalTo(self.view.mas_left).with.offset(15);
-//        make.right.equalTo(self.view.mas_right).with.offset(-15);
-//        make.height.mas_equalTo(40);
-//    }];
+    //    [sexField mas_makeConstraints:^(MX_MASConstraintMaker *make) {
+    //        make.top.equalTo(self.view.mas_top).with.offset(135);
+    //        make.left.equalTo(self.view.mas_left).with.offset(15);
+    //        make.right.equalTo(self.view.mas_right).with.offset(-15);
+    //        make.height.mas_equalTo(40);
+    //    }];
+    //
+    //    [maleButton mas_makeConstraints:^(MX_MASConstraintMaker *make) {
+    //        make.left.equalTo(self.view.mas_left).with.offset(40+15);
+    //        make.top.equalTo(self.view.mas_top).with.offset(135);
+    ////        make.bottom.equalTo(sexField.mas_bottom).with.offset(0);
+    //        make.size.mas_equalTo(CGSizeMake(80, 40));
+    //    }];
+    //
+    //    [femaleButton mas_makeConstraints:^(MX_MASConstraintMaker *make) {
+    //        make.left.equalTo(self.view.mas_left).with.offset(120+15);
+    //        make.size.mas_equalTo(CGSizeMake(80, 40));
+    //        make.top.equalTo(self.view.mas_top).with.offset(135);
+    ////        make.bottom.equalTo(sexField.mas_bottom).with.offset(0);
+    //    }];
+    //
+    //
+    //    [IdNumber mas_makeConstraints:^(MX_MASConstraintMaker *make) {
+    //        make.centerX.equalTo(self.view.mas_centerX);
+    //        make.top.equalTo(self.view.mas_top).with.offset(185);
+    //        make.left.equalTo(self.view.mas_left).with.offset(15);
+    //        make.right.equalTo(self.view.mas_right).with.offset(-15);
+    //        make.height.mas_equalTo(40);
+    //    }];
     
     
     [password mas_makeConstraints:^(MX_MASConstraintMaker *make) {
@@ -217,28 +217,28 @@
     
     
     _selectButton = [[UIButton alloc] init];
-//    [UIButton setBorderStyle:UITextBorderStyleLine]; //外框类型
-//    village.returnKeyType = UIReturnKeyNext;  //键盘返回类型
-//    village.delegate = self;
+    //    [UIButton setBorderStyle:UITextBorderStyleLine]; //外框类型
+    //    village.returnKeyType = UIReturnKeyNext;  //键盘返回类型
+    //    village.delegate = self;
     _selectButton.backgroundColor=[UIColor whiteColor];
-//    village.keyboardType = UIKeyboardTypeDefault;//键盘显示类型
-//    selectButton.tag=4;
+    //    village.keyboardType = UIKeyboardTypeDefault;//键盘显示类型
+    //    selectButton.tag=4;
     _selectButton.layer.borderColor=[[UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1]CGColor];
     _selectButton.layer.borderWidth= 1.0f;
-//    village.placeholder=@"小区名称";
+    //    village.placeholder=@"小区名称";
     [_selectButton setTitle:@"请选择小区" forState:UIControlStateNormal];
     [_selectButton setTitleColor:[UIColor colorWithRed:188.0/255.0 green:188.0/255.0 blue:188.0/255.0 alpha:1.0] forState:UIControlStateNormal];
     _selectButton.contentHorizontalAlignment=UIControlContentHorizontalAlignmentLeft;
     [_selectButton addTarget:self action:@selector(selectBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-//    village.leftViewMode = UITextFieldViewModeAlways;
+    //    village.leftViewMode = UITextFieldViewModeAlways;
     [self.view addSubview:_selectButton];
     
     //view添加点击事件，使下拉框收回
-//    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
-//    tapGr.cancelsTouchesInView = NO;
-//    tapGr.delegate = self;
-//    [self.view addGestureRecognizer:tapGr];
-
+    //    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+    //    tapGr.cancelsTouchesInView = NO;
+    //    tapGr.delegate = self;
+    //    [self.view addGestureRecognizer:tapGr];
+    
     
     housenumber = [[UITextField alloc] init];
     [housenumber setBorderStyle:UITextBorderStyleLine]; //外框类型
@@ -276,15 +276,15 @@
     sex = 1;
     [maleButton setImage:[UIImage imageNamed:@"绿色单选"] forState:UIControlStateNormal];
     [femaleButton setImage:[UIImage imageNamed:@"灰色单选"] forState:UIControlStateNormal];
-
+    
 }
 
 -(void)femaleSelect {
     sex = 2;
     [femaleButton setImage:[UIImage imageNamed:@"绿色单选"] forState:UIControlStateNormal];
     [maleButton setImage:[UIImage imageNamed:@"灰色单选"] forState:UIControlStateNormal];
-
-
+    
+    
 }
 
 -(void)next:(UIButton *)tunch
@@ -307,16 +307,16 @@
     if(villageID==9999)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"请选择小区" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-//        alert.delegate =self;
-//        [alert setTag:999];
+        //        alert.delegate =self;
+        //        [alert setTag:999];
         [alert show];
         return;
     }
     
     if ([housenumber.text length] == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"请输入门牌号" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-//        alert.delegate =self;
-//        [alert setTag:999];
+        //        alert.delegate =self;
+        //        [alert setTag:999];
         [alert show];
         return;
     }
@@ -324,31 +324,33 @@
     if ([password.text isEqualToString:password2.text]&&[password.text length]>=6) {
         [self postRequest];
         
-        //环信注册
-        [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:self.login_name password:password.text withCompletion:^(NSString *username, NSString *password, EMError *error) {
-            MDLog(@"=============");
-            if (!error) {
-                MDLog(@"环信注册成功");
-                
-                
-                //环信登陆
-                [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:self.login_name password:password2.text completion:^(NSDictionary *loginInfo, EMError *error) {
-                    if (!error && loginInfo) {
-                        MDLog(@"环信登陆成功！！%@",loginInfo);
-                        [[EaseMob sharedInstance].chatManager setApnsNickname:number.text];
-//
-//                            
-                        //设置是否自动登录
-                        [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
-                    }
-                } onQueue:nil];
-
-            }
-            else
-            {
-                MDLog(@"环信错误：%@",error);
-            }
-        } onQueue:nil];
+        /*
+         //环信注册
+         [[EaseMob sharedInstance].chatManager asyncRegisterNewAccount:self.login_name password:password.text withCompletion:^(NSString *username, NSString *password, EMError *error) {
+         MDLog(@"=============");
+         if (!error) {
+         MDLog(@"环信注册成功");
+         
+         
+         //环信登陆
+         [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:self.login_name password:password2.text completion:^(NSDictionary *loginInfo, EMError *error) {
+         if (!error && loginInfo) {
+         MDLog(@"环信登陆成功！！%@",loginInfo);
+         [[EaseMob sharedInstance].chatManager setApnsNickname:number.text];
+         //
+         //
+         //设置是否自动登录
+         [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
+         }
+         } onQueue:nil];
+         
+         }
+         else
+         {
+         MDLog(@"环信错误：%@",error);
+         }
+         } onQueue:nil];
+         */
         
     }else if (![password.text isEqualToString:password2.text]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"密码不一致" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
@@ -448,8 +450,8 @@
     villageID = (int)[villageDic objectForKey:_selectButton.titleLabel.text];
     NSLog(@"villageDic%@",villageDic);
     
-//    NSDictionary * villageDic = @[@"建昌里":3;@"建明里":4;@"长青北里":6;@"育红东里":7;@"育红东里平方":8;@"育红路7号院":9;@"中山北里":10;@"诗景颂苑":12;@"红波西里";13];
-//    NSDictionary * villageDic =  [NSDictionary dictionaryWithObjectsAndKeys:@"建昌里",3,@"建明里",4,@"长青北里",6,@"育红东里",7,@"育红东里平方",8,@"育红路7号院",9,@"中山北里",10,@"诗景颂苑",12,@"红波西里",13, nil];
+    //    NSDictionary * villageDic = @[@"建昌里":3;@"建明里":4;@"长青北里":6;@"育红东里":7;@"育红东里平方":8;@"育红路7号院":9;@"中山北里":10;@"诗景颂苑":12;@"红波西里";13];
+    //    NSDictionary * villageDic =  [NSDictionary dictionaryWithObjectsAndKeys:@"建昌里",3,@"建明里",4,@"长青北里",6,@"育红东里",7,@"育红东里平方",8,@"育红路7号院",9,@"中山北里",10,@"诗景颂苑",12,@"红波西里",13, nil];
     
     if(dropDown == nil) {
         CGFloat f = _selectButton.height*arr.count;//_selectButton.height*arr.count;
@@ -458,9 +460,9 @@
         dropDown.delegate = self;
         [dropDown showDropDown:sender :&f :arr];
         dropDown.font = 10;
-//        dropDown.isOffset = 0;
-//        dropDown.Offset = 400;
-//        dropDown.textshowStyle = TextShowStyleCenter;
+        //        dropDown.isOffset = 0;
+        //        dropDown.Offset = 400;
+        //        dropDown.textshowStyle = TextShowStyleCenter;
         
     }
     else {
@@ -519,34 +521,37 @@
     model.parameter = parameter;
     model.delegate = self;
     [model starRequest];
-
-//       [manager POST:url parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSString * str = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-//        //回馈数据
-//        NSLog(@"%@", str);
-//        
-//        NSArray *array = [str componentsSeparatedByString:@","];
-//        NSArray *success=[array[0] componentsSeparatedByString:@":"];
-//        
-//        if ([success[1] isEqualToString:@"true"]) {
-//            NSUserDefaults *stdDefault = [NSUserDefaults standardUserDefaults];
-//            [stdDefault setObject:self.login_name forKey:@"user_name"];
-//            [stdDefault setObject:number.text forKey:@"Name"];
-//            BRSEndSignlnViewController * esv=[[BRSEndSignlnViewController alloc] init];
-//            [self.navigationController pushViewController:esv animated:YES];
-//        }
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"%@", error);
-//    }];
+    
+    //       [manager POST:url parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    //        NSString * str = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+    //        //回馈数据
+    //        NSLog(@"%@", str);
+    //
+    //        NSArray *array = [str componentsSeparatedByString:@","];
+    //        NSArray *success=[array[0] componentsSeparatedByString:@":"];
+    //
+    //        if ([success[1] isEqualToString:@"true"]) {
+    //            NSUserDefaults *stdDefault = [NSUserDefaults standardUserDefaults];
+    //            [stdDefault setObject:self.login_name forKey:@"user_name"];
+    //            [stdDefault setObject:number.text forKey:@"Name"];
+    //            BRSEndSignlnViewController * esv=[[BRSEndSignlnViewController alloc] init];
+    //            [self.navigationController pushViewController:esv animated:YES];
+    //        }
+    //    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    //        NSLog(@"%@", error);
+    //    }];
 }
 
 //请求数据回调
 -(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
 {
     NSMutableDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
-//    NSLog(@"%@",dic);
+    //    NSLog(@"%@",dic);
     NSLog(@"登陆信息：%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
     NSLog(@"======dic%@",dic);
+    NSDictionary * obj = [dic objectForKey:@"obj"];
+    NSString * hxName = [obj objectForKey:@"hxName"];
+    NSString * hxPwd = [obj objectForKey:@"hxPwd"];
     
     NSDictionary * userInfo = @{@"userId":[dic objectForKey:@"msg"],@"userName":number.text,@"userAccount":self.login_name};
     
@@ -555,15 +560,32 @@
     MDUserVO *user = [MDUserVO registeredFromDignInUser:userInfo];
     [MDUserVO  initWithCoder:user];
     //回馈数据
-//    NSLog(@"%d",[[dic objectForKey:@"success"] intValue]);
-
+    //    NSLog(@"%d",[[dic objectForKey:@"success"] intValue]);
+    
     if ([[dic objectForKey:@"success"] intValue] ==1) {
         NSUserDefaults *stdDefault = [NSUserDefaults standardUserDefaults];
         [stdDefault setObject:self.login_name forKey:@"user_name"];
         [stdDefault setObject:[MDUserVO userVO].userID forKey:@"user_Id"];
+        //环信登录
+        [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:hxName password:hxPwd completion:^(NSDictionary *loginInfo, EMError *error) {
+            NSLog(@"11%@=====%@",hxName,hxPwd);
+            if (!error && loginInfo) {
+                NSLog(@"22%@=====%@",hxName,hxPwd);
+                
+                MDLog(@"环信登陆成功！！%@",loginInfo);
+                [[EaseMob sharedInstance].chatManager setApnsNickname:number.text];
+                //
+                //
+                //设置是否自动登录
+                [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
+            }
+        } onQueue:nil];
+        
+        
+        
         BRSEndSignlnViewController * esv=[[BRSEndSignlnViewController alloc] init];
         [self.navigationController pushViewController:esv animated:YES];
-
+        
     }
 }
 

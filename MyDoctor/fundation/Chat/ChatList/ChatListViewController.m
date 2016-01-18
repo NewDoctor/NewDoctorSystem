@@ -193,10 +193,10 @@
     
     
     
-    
-    
-    
-    
+    if ([arr count]==0) {
+        [_tableView reloadData];
+
+    }
     //
     //    NSLog(@"+++++%@%@",nickName,headImg);
 }
@@ -525,9 +525,10 @@
         patienModel = nil;
     }
     if (conversation.conversationType == eConversationTypeChat) {
-        
         cell.name = patienModel.Name;
-        
+        if ([patienModel.Name length]==0) {
+            cell.name = conversation.chatter;
+        }
         UIImage * headImg = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@%@",NSHomeDirectory(),patienModel.ImagePath]];
         
         NSLog(@"!!!%@%@",NSHomeDirectory(),patienModel.ImagePath);

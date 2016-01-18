@@ -1,18 +1,20 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++F3E7B18",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++CD84D4C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++BB9825B" : 0,
+    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++CD84D4C" : 0,
     "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++F3E7B18" : 0,
-    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++591BAEB" : 0,
-    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++BB9825B" : 0
+    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++591BAEB" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3C925E89-083D-42B8-8CC3-DC5772009083",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++BB9825B" : "TheDoctorSystem%E5%89%AF%E6%9C%AC\/",
+    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++CD84D4C" : "NewDoctorSystem\/",
     "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++F3E7B18" : "TheDoctorSystem\/",
-    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++591BAEB" : "TheDoctorSystem%E5%89%AF%E6%9C%AC\/",
-    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++BB9825B" : "TheDoctorSystem%E5%89%AF%E6%9C%AC\/"
+    "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++591BAEB" : "TheDoctorSystem%E5%89%AF%E6%9C%AC\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "MyDoctor",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -27,6 +29,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhanghaochen\/TheDoctorSystem.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++BB9825B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NewDoctor\/NewDoctorSystem.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D8C20DD8529538784DCEFA4D0F6703C5B7D70402+++CD84D4C"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NewDoctor\/NewDoctorSystem.git",

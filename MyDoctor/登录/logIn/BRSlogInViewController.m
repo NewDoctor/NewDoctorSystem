@@ -35,7 +35,7 @@
     NSURLSessionDownloadTask * _task;
     
     
-
+    
 }
 #define autoSizeScaleX  (appWidth>320?appWidth/320:1)
 #define autoSizeScaleY  (appHeight>568?appHeight/568:1)
@@ -51,7 +51,7 @@
         make.top.equalTo(self.view.mas_top).with.offset(90);
         make.size.mas_equalTo(CGSizeMake(80, 80));
     }];
-
+    
     UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Actiondo)];
     [self.view addGestureRecognizer:tapGesture];
     [self logInView];
@@ -75,15 +75,19 @@
 //请求数据回调
 -(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
 {
-            //回馈数据
+    //回馈数据
     
-    NSLog(@"%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    NSLog(@"登录信息%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
     
     NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
     NSLog(@"%@",dic);
     MDUserVO *user = [MDUserVO convertFromAccountHomeUser:dic];
     [MDUserVO  initWithCoder:user];
-
+    
+    NSDictionary * obj = [dic objectForKey:@"obj"];
+    NSString * hxName = [obj objectForKey:@"hxName"];
+    NSString * hxPwd = [obj objectForKey:@"hxPwd"];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData * data = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",user.photourl,user.photo]]];
         UIImage *headImg = [[UIImage alloc]initWithData:data];
@@ -97,7 +101,7 @@
                 NSString *uniquePath=[path2 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[MDUserVO userVO].userID]];
                 BOOL result=[UIImagePNGRepresentation(headImg)writeToFile: uniquePath atomically:YES];
                 MDLog(@"===========uniquePath:%@",uniquePath);
-
+                
                 
             });
         }
@@ -111,6 +115,18 @@
         NSUserDefaults *stdDefault = [NSUserDefaults standardUserDefaults];
         [stdDefault setObject:logInField.text forKey:@"user_name"];
         [stdDefault setObject:[MDUserVO userVO].userID forKey:@"user_Id"];
+        
+        //环信登录
+        [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:hxName password:hxPwd completion:^(NSDictionary *loginInfo, EMError *error) {
+            if (!error && loginInfo) {
+                MDLog(@"环信登陆成功！！%@",loginInfo);
+                //
+                //
+                //设置是否自动登录
+                [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
+            }
+        } onQueue:nil];
+        
         NSLog(@"%@",[MDUserVO userVO].userID);
         [self dismissViewControllerAnimated:YES completion:^{
             NSLog(@"back");
@@ -130,7 +146,7 @@
     logInField.backgroundColor=[UIColor whiteColor];
     logInField.placeholder = @"请输入手机号"; //默认显示的字
     [logInField setValue:[UIFont boldSystemFontOfSize:(15*(appWidth>320?appWidth/320:1))] forKeyPath:@"_placeholderLabel.font"];
-
+    
     logInField.returnKeyType = UIReturnKeyNext;  //键盘返回类型
     logInField.delegate = self;
     logInField.keyboardType = UIKeyboardTypeNumberPad;//键盘显示类型
@@ -169,7 +185,7 @@
     button.layer.masksToBounds = YES;
     [button setTitle:[NSString stringWithFormat:@"登录"] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor colorWithRed:50/255.0 green:119/255.0 blue:154/255.0 alpha:1] forState:UIControlStateNormal];
-
+    
     [button addTarget:self action:@selector(tunch:) forControlEvents:UIControlEventTouchUpInside];
     button.enabled=NO;
     
@@ -249,7 +265,7 @@
         
         NSLog(@"back");
     }];
-
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"backselected1" object:self];
     
 }
@@ -259,17 +275,10 @@
     
     //5.post请求
     if ([logInField.text length]>0&&[password.text length]>0) {
-    
+        
         [self postRequest];
         
-        //环信登陆
-        [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:logInField.text password:password.text completion:^(NSDictionary *loginInfo, EMError *error) {
-            if (loginInfo) {
-                MDLog(@"环信登陆成功！！%@",loginInfo);
-                //设置是否自动登录
-                [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
-            }
-        } onQueue:nil];
+        
     }else if ([password.text length]==0)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"帐号或密码不能为空！" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
@@ -294,7 +303,7 @@
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-
+    
     [view1 mas_updateConstraints:^(MX_MASConstraintMaker *make) {
         CGRect rx = [ UIScreen mainScreen ].bounds;
         make.top.equalTo(self.view.mas_top).with.offset(rx.size.height/2-165);

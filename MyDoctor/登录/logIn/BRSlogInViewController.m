@@ -63,7 +63,7 @@
 {
     MDRequestModel * model = [[MDRequestModel alloc] init];
     model.path = MDPath;
-    model.methodNum = 10102;
+    model.methodNum = 20101;
     NSString * parameter=[NSString stringWithFormat:@"%@@`%@",logInField.text,password.text];
     model.parameter = parameter;
     model.delegate = self;
@@ -105,7 +105,7 @@
     
     NSLog(@"%@",dic);
     
-    if ([[dic objectForKey:@"msg"] isEqualToString:@"登录成功"]) {
+    if ([[dic objectForKey:@"msg"] isEqualToString:@"登录成功!"]) {
         [[NSNotificationCenter defaultCenter]
          postNotificationName:@"showBRSMainView" object:self];
         NSUserDefaults *stdDefault = [NSUserDefaults standardUserDefaults];
@@ -220,7 +220,7 @@
     [button1 setTitleColor:[UIColor colorWithRed:50/255.0 green:119/255.0 blue:154/255.0 alpha:1] forState:UIControlStateNormal];
     button1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"注册按钮"]];
     [button1 addTarget:self action:@selector(tunch1:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button1];
+//    [self.view addSubview:button1];
     button1.frame = CGRectMake(appWidth/2-68/2, appHeight-55, 68, 25);
     NSUserDefaults * stdDefault = [NSUserDefaults standardUserDefaults];
     NSString * str=[stdDefault objectForKey:@"user_name"];

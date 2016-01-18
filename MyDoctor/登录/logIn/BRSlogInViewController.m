@@ -277,7 +277,7 @@
     if ([logInField.text length]>0&&[password.text length]>0) {
         
         [self postRequest];
-        
+        NSLog(@"212123");
         
     }else if ([password.text length]==0)
     {

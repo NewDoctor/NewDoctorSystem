@@ -9,8 +9,10 @@
 #import "DocCallRecordViewController.h"
 #import "DocServiceFolerVO.h"
 #import "DocHomeTableViewCell.h"
+#import "MDRequestModel.h"
+#import "MJRefresh.h"
 
-@interface DocCallRecordViewController ()
+@interface DocCallRecordViewController ()<sendInfoToCtr>
 
 @end
 
@@ -23,36 +25,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    [self dataArray];
-    [self TableView];
-}
--(void)dataArray
-{
     dataArray=[[NSMutableArray alloc] init];
-    
-    DocServiceFolerVO * sfv=[[DocServiceFolerVO alloc] init];
-    sfv.serviceType=@"线上咨询";
-    sfv.serviceStatus=@"未完成";
-    sfv.headImg = @"叔叔.jpg";
-    sfv.Time=@"2015年12月11日  13:00";
-    
-    DocServiceFolerVO * sfv1=[[DocServiceFolerVO alloc] init];
-    sfv1.serviceType=@"电话咨询";
-    sfv1.serviceStatus=@"已完成";
-    sfv1.headImg = @"大婶.jpg";
-    sfv1.Time=@"2015年12月11日  13:00";
-    
-    DocServiceFolerVO * sfv2=[[DocServiceFolerVO alloc] init];
-    sfv2.serviceType=@"照护";
-    sfv2.serviceStatus=@"已完成";
-    sfv2.headImg = @"大爷.jpg";
-    sfv2.Time=@"2015年12月11日  13:00";
-    
-    [dataArray addObject:sfv];
-    [dataArray addObject:sfv1];
-    [dataArray addObject:sfv2];
+//    [self postRequest];
+     [self TableView];
+    if(!_tableView.header.isRefreshing) {
+        [_tableView.header beginRefreshing];
+    }
+    [self postRequest];
+    __weak typeof(self) weakSelf = self;
+    [_tableView addLegendHeaderWithRefreshingBlock:^{
+        [weakSelf postRequest];
+    }];
 }
 
+#pragma mark - POST请求
+- (void)postRequest
+{
+    MDRequestModel * model = [[MDRequestModel alloc] init];
+    model.path = MDPath;
+    model.methodNum = 20301;
+    NSString * parameter=[NSString stringWithFormat:@"%@@`%d@`%d@`%d",[MDUserVO userVO].userID,10,0,0];
+    model.parameter = parameter;
+    model.delegate = self;
+    [model starRequest];
+    
+}
+//请求数据回调
+-(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
+{
+    //回馈数据
+    [dataArray removeAllObjects];
+    NSLog(@"电话信息%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    
+    NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
+    NSLog(@"%@",dic);
+    NSArray * array=[dic objectForKey:@"obj"];
+    NSLog(@"%@",array);
+    for (int i=0; i<[array count]; i++) {
+        DocServiceFolerVO * sfv2=[[DocServiceFolerVO alloc] init];
+        sfv2.Id=[array[i] objectForKey:@"id"];
+        sfv2.serviceType=@"电话咨询";
+        sfv2.serviceStatus=@"已完成";
+        sfv2.name=[array[i] objectForKey:@"RealName"];
+        sfv2.headImg = [NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[array[i] objectForKey:@"Photo"]];
+        NSLog(@"------------%@",[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[array[i] objectForKey:@"Photo"]]);
+        sfv2.Time=[array[i] objectForKey:@"ConsultTime"];
+        [dataArray addObject:sfv2];
+    }
+    
+    [_tableView reloadData];
+    [_tableView.header endRefreshing];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -72,6 +96,7 @@
     _tableView.separatorStyle = NO;
     [self.view addSubview:_tableView];
     [_tableView reloadData];
+    [_tableView.header endRefreshing];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *Cell=@"HeaderCell";
@@ -86,10 +111,11 @@
     }
     if ([dataArray count]>0) {
         DocServiceFolerVO * service=dataArray[indexPath.row];
+        cell.name=service.name;
         cell.serviceType=service.serviceType;
         cell.serviceStatus=service.serviceStatus;
         cell.time=service.Time;
-        cell.headImg = service.headImg;
+        cell.headImg =service.headImg;
     }
     [cell drawCell];
     

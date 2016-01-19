@@ -10,8 +10,9 @@
 #import "DocServiceFolerVO.h"
 #import "DocHomeTableViewCell.h"
 #import "DocRecordViewController.h"
+#import "MDRequestModel.h"
 
-@interface DocUnFinishedViewController ()
+@interface DocUnFinishedViewController ()<sendInfoToCtr>
 
 @end
 
@@ -24,37 +25,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    [self dataArray];
+    dataArray=[[NSMutableArray alloc] init];
+    [self postRequest];
     [self TableView];
 }
--(void)dataArray
+#pragma mark - POST请求
+- (void)postRequest
 {
-    dataArray=[[NSMutableArray alloc] init];
+    MDRequestModel * model = [[MDRequestModel alloc] init];
+    model.path = MDPath;
+    model.methodNum = 20203;
+    NSString * parameter=[NSString stringWithFormat:@"%@@`%d@`%d@`%d",[MDUserVO userVO].userID,10,0,0];
+    model.parameter = parameter;
+    model.delegate = self;
+    [model starRequest];
     
-    DocServiceFolerVO * sfv=[[DocServiceFolerVO alloc] init];
-    sfv.serviceType=@"线上咨询";
-    sfv.serviceStatus=@"未完成";
-    sfv.headImg = @"大婶.jpg";
-    sfv.Time=@"2015年12月11日  13:00";
+}
+//请求数据回调
+-(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
+{
+    //回馈数据
     
-    DocServiceFolerVO * sfv1=[[DocServiceFolerVO alloc] init];
-    sfv1.serviceType=@"电话咨询";
-    sfv1.serviceStatus=@"已完成";
-    sfv1.headImg = @"大叔";
-    sfv1.Time=@"2015年12月11日  13:00";
+    NSLog(@"未完成信息%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    
+    NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
+    NSLog(@"%@",dic);
     
     DocServiceFolerVO * sfv2=[[DocServiceFolerVO alloc] init];
-    sfv2.serviceType=@"照护";
+    sfv2.serviceType=@"电话咨询";
     sfv2.serviceStatus=@"已完成";
     sfv2.headImg = @"叔叔.jpg";
     sfv2.Time=@"2015年12月11日  13:00";
-    
-    [dataArray addObject:sfv];
-    [dataArray addObject:sfv1];
     [dataArray addObject:sfv2];
+    [_tableView reloadData];
+
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

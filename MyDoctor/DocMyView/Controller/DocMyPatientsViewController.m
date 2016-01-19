@@ -10,8 +10,10 @@
 #import "NIDropDown.h"
 #import "DocMyPatientsCell.h"
 #import "DocMyPatientsModel.h"
+#import "MDRequestModel.h"
+#import "UIImageView+EMWebCache.h"
 
-@interface DocMyPatientsViewController ()<NIDropDownDelegate,UIGestureRecognizerDelegate>
+@interface DocMyPatientsViewController ()<NIDropDownDelegate,UIGestureRecognizerDelegate,sendInfoToCtr>
 {
     UIView * _headerView;
     UITableView * _tableView;
@@ -27,50 +29,50 @@
 
 
 @implementation DocMyPatientsViewController
-
--(NSMutableArray *)dataSource
-{
-    if (_dataSource == nil) {
-        _dataSource = [[NSMutableArray alloc] init];
-        DocMyPatientsModel * group0 = [[DocMyPatientsModel alloc] init];
-        group0.headImg = @"大妈.jpg";
-        group0.name = @"张大妈";
-        group0.age = @"58";
-        group0.sex = @"女";
-        
-        DocMyPatientsModel * group1 = [[DocMyPatientsModel alloc] init];
-        group1.headImg = @"大叔";
-        group1.name = @"李大叔";
-        group1.age = @"44";
-        group1.sex = @"男";
-        
-        DocMyPatientsModel * group2 = [[DocMyPatientsModel alloc] init];
-        group2.headImg = @"大爷.jpg";
-        group2.name = @"赵大爷";
-        group2.age = @"68";
-        group2.sex = @"男";
-        
-        DocMyPatientsModel * group3 = [[DocMyPatientsModel alloc] init];
-        group3.headImg = @"叔叔.jpg";
-        group3.name = @"老王";
-        group3.age = @"39";
-        group3.sex = @"男";
-        
-        DocMyPatientsModel * group4 = [[DocMyPatientsModel alloc] init];
-        group4.headImg = @"大婶.jpg";
-        group4.name = @"张妈";
-        group4.age = @"58";
-        group4.sex = @"女";
-        
-        [_dataSource addObject:group0];
-        [_dataSource addObject:group1];
-        [_dataSource addObject:group2];
-        [_dataSource addObject:group3];
-        [_dataSource addObject:group4];
-
-    }
-    return _dataSource;
-}
+//
+//-(NSMutableArray *)dataSource
+//{
+//    if (_dataSource == nil) {
+//        _dataSource = [[NSMutableArray alloc] init];
+//        DocMyPatientsModel * group0 = [[DocMyPatientsModel alloc] init];
+//        group0.headImg = @"大妈.jpg";
+//        group0.name = @"张大妈";
+//        group0.age = @"58";
+//        group0.sex = @"女";
+//        
+//        DocMyPatientsModel * group1 = [[DocMyPatientsModel alloc] init];
+//        group1.headImg = @"大叔";
+//        group1.name = @"李大叔";
+//        group1.age = @"44";
+//        group1.sex = @"男";
+//        
+//        DocMyPatientsModel * group2 = [[DocMyPatientsModel alloc] init];
+//        group2.headImg = @"大爷.jpg";
+//        group2.name = @"赵大爷";
+//        group2.age = @"68";
+//        group2.sex = @"男";
+//        
+//        DocMyPatientsModel * group3 = [[DocMyPatientsModel alloc] init];
+//        group3.headImg = @"叔叔.jpg";
+//        group3.name = @"老王";
+//        group3.age = @"39";
+//        group3.sex = @"男";
+//        
+//        DocMyPatientsModel * group4 = [[DocMyPatientsModel alloc] init];
+//        group4.headImg = @"大婶.jpg";
+//        group4.name = @"张妈";
+//        group4.age = @"58";
+//        group4.sex = @"女";
+//        
+//        [_dataSource addObject:group0];
+//        [_dataSource addObject:group1];
+//        [_dataSource addObject:group2];
+//        [_dataSource addObject:group3];
+//        [_dataSource addObject:group4];
+//
+//    }
+//    return _dataSource;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -81,16 +83,54 @@
     
     //返回按钮点击
     [self.leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    
+    _dataSource=[[NSMutableArray alloc] init];
+    [self postRequest];
     [self createTableView];
-
     
     [self createHeaderView];
     
-
-
-    // Do any additional setup after loading the view.
 }
+#pragma mark - POST请求
+- (void)postRequest
+{
+    MDRequestModel * model = [[MDRequestModel alloc] init];
+    model.path = MDPath;
+    model.methodNum = 20303;
+    NSString * parameter=[NSString stringWithFormat:@"%@@`%d@`%d@`%d",[MDUserVO userVO].userID,10,0,0];
+    model.parameter = parameter;
+    model.delegate = self;
+    [model starRequest];
+    
+}
+//请求数据回调
+-(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
+{
+    //回馈数据
+    
+    NSLog(@"患者信息%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    
+    NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
+    NSArray * array=[dic objectForKey:@"obj"];
+    for (int i=0; i<[array count]; i++) {
+        DocMyPatientsModel * sfv2=[[DocMyPatientsModel alloc] init];
+        sfv2.Id=[array[i] objectForKey:@"id"];
+        if ([[array[i] objectForKey:@"Sex"] intValue]== 1) {
+            sfv2.sex=@"男";
+        }else{
+            sfv2.sex=@"女";
+        }
+        sfv2.name=[array[i] objectForKey:@"UserName"];
+        sfv2.age=[array[i] objectForKey:@"Age"];
+        sfv2.headImg = [NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[array[i] objectForKey:@"Photo"]];
+        NSLog(@"------------%@",[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[array[i] objectForKey:@"Photo"]]);
+//        sfv2.Time=[array[i] objectForKey:@"ConsultTime"];
+        [_dataSource addObject:sfv2];
+    }
+    
+    [_tableView reloadData];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -314,7 +354,8 @@
     
     //取出数据源数据
     DocMyPatientsModel * model = self.dataSource[indexPath.section];
-    cell.headerView.image = [UIImage imageNamed:model.headImg];
+    [cell.headerView sd_setImageWithURL:[NSURL URLWithString:model.headImg] placeholderImage:[UIImage imageNamed:@"个人头像默认"]];
+//    cell.headerView.image = [UIImage imageNamed:model.headImg];
     cell.nameLab.text = [NSString stringWithFormat:@"姓名: %@",model.name];
     cell.ageLab.text = [NSString stringWithFormat:@"年龄: %@岁",model.age];
     cell.sexyLab.text = [NSString stringWithFormat:@"性别: %@",model.sex];

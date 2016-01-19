@@ -10,6 +10,7 @@
 
 @implementation DocMyPatientsModel
 
+@synthesize Id;
 @synthesize headImg;
 @synthesize name;
 @synthesize age;

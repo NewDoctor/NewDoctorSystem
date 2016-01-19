@@ -10,6 +10,7 @@
 #import "MDConst.h"
 
 @interface DocHomeTableViewCell : UITableViewCell
+@property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * serviceType;
 @property (nonatomic, strong) NSString * serviceStatus;
 @property (nonatomic, strong) NSString * time;

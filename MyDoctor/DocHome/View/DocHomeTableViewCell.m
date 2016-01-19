@@ -9,6 +9,7 @@
 #import "DocHomeTableViewCell.h"
 #import "MX_MASConstraintMaker.h"
 #import "View+MASAdditions.h"
+#import "UIImageView+EMWebCache.h"
 
 @implementation DocHomeTableViewCell
 
@@ -36,9 +37,20 @@
     
     
     UIImageView * headImage=[[UIImageView alloc] initWithFrame:CGRectMake(20, 20, 90, 70)];
-    [headImage setImage:[UIImage imageNamed:_headImg]];
+    [headImage sd_setImageWithURL:[NSURL URLWithString:_headImg] placeholderImage:[UIImage imageNamed:@"专家头像"]];
     [view addSubview:headImage];
 //    nowCondition
+    
+    UILabel * name=[[UILabel alloc] init];
+    name.text=_name;
+    name.font=[UIFont systemFontOfSize:14];
+    [view addSubview:name];
+    [name mas_makeConstraints:^(MX_MASConstraintMaker *make) {
+        make.top.equalTo(view.mas_top).with.offset(20);
+        make.left.equalTo(headImage.mas_right).with.offset(25);
+        make.right.equalTo(view.mas_right).with.offset(-10);
+    }];
+    
     
     UILabel * nowCondition=[[UILabel alloc] init];
     nowCondition.text=_serviceType;
@@ -49,6 +61,7 @@
         make.left.equalTo(headImage.mas_right).with.offset(25);
         make.right.equalTo(view.mas_right).with.offset(-10);
     }];
+    
     
     UILabel * time=[[UILabel alloc] init];
     time.text=_time;

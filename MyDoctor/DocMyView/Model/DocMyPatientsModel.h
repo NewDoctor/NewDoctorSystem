@@ -10,6 +10,7 @@
 
 @interface DocMyPatientsModel : NSObject
 
+@property (nonatomic,copy) NSString * Id;
 @property (nonatomic,copy) NSString * headImg;
 @property (nonatomic,copy) NSString * name;
 @property (nonatomic,copy) NSString * age;

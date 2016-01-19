@@ -10,6 +10,7 @@
 
 @implementation DocServiceFolerVO
 
+@synthesize Id;
 @synthesize serviceType;
 @synthesize serviceStatus;
 @synthesize Time;

@@ -14,6 +14,7 @@
 #import "DocRecordViewController.h"
 #import "NIDropDown.h"
 #import "MainViewController.h"
+#import "MDnoticeCenterController.h"
 
 @interface DocHomeViewController ()<NIDropDownDelegate>
 
@@ -35,7 +36,7 @@
     
 //    [self setNavigationBarWithrightBtn:@"通知" leftBtn:@"下拉框"];
     [self setNavigationBarWithrightBtn:@"通知" leftBtn:nil];
-    [self.rightBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.rightBtn addTarget:self action:@selector(noticeClick) forControlEvents:UIControlEventTouchUpInside];
 
     [self.leftBtn addTarget:self action:@selector(requirBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     self.leftBtn.width = 80;
@@ -55,6 +56,13 @@
     }
     [self draw];
 
+}//通知按钮点击
+-(void)noticeClick
+{
+    MDnoticeCenterController * notice = [[MDnoticeCenterController alloc] init];
+    notice.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:notice animated:YES];
 }
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"pushViewInDocHome" object:nil];

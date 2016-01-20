@@ -178,8 +178,6 @@
     
     button=[[UIButton alloc] init];
     button.backgroundColor = [UIColor colorWithRed:34/255.0 green:207/255.0 blue:169/255.0 alpha:1];
-//    button.layer.borderColor = [[UIColor whiteColor] CGColor];
-//    button.layer.borderWidth = 2;
     button.layer.cornerRadius = 6;
     button.layer.masksToBounds = YES;
     [button setTitle:[NSString stringWithFormat:@"登录"] forState:UIControlStateNormal];

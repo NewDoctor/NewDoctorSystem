@@ -97,15 +97,12 @@ NSString *const kRouterEventChatHeadImageTapEventName = @"kRouterEventChatHeadIm
         }
         else
         {
-            placeholderImage = [UIImage imageNamed:@"demo-avatar-jobs"];        }
-
-        
-        
+            placeholderImage = [UIImage imageNamed:@"demo-avatar-jobs"];
+        }
     }
     else
     {
-        placeholderImage = [UIImage imageNamed:@"c"];
-        
+    
         UIImage * headImg = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/Library/Caches/PatientsIMAGE/%@.png",NSHomeDirectory(),messageModel.username]];
         
         if (headImg) {

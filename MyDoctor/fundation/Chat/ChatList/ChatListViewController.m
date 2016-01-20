@@ -121,7 +121,7 @@
     //    [model starRequest];
     MDRequestModel * model = [[MDRequestModel alloc] init];
     model.path = MDPath;
-    model.methodNum = 10109;
+    model.methodNum = 10110;
     //    NSLog(@"===%@",_chatID);
     NSString * parameter = chatId;
     model.delegate = self;
@@ -155,6 +155,7 @@
             _name=[dic objectForKey:@"Phone"];
         }
         patientModel.phone = [dic objectForKey:@"Phone"];
+        patientModel.HxName= [dic objectForKey:@"HxName"];
         if ([dic objectForKey:@"Photo"]) {
 //            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 NSData * data = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[dic objectForKey:@"Photo"]]]];
@@ -166,7 +167,7 @@
                         //创建文件下载目录
                         NSString * path2 = [fileUtil createCachePath:IMAGECACHE];
                         
-                        NSString *uniquePath=[path2 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[dic objectForKey:@"Phone"]]];
+                        NSString *uniquePath=[path2 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[dic objectForKey:@"HxName"]]];
                         BOOL result=[UIImagePNGRepresentation(headImg)writeToFile: uniquePath atomically:YES];
                         
                         if(result)
@@ -508,7 +509,7 @@
         cell = [[ChatListCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
     }
     EMConversation *conversation = [self.dataSource objectAtIndex:indexPath.row];
-    cell.name = conversation.chatter;
+//    cell.name = conversation.chatter;
     
     
     //取出conversation.chatter对应的数据库
@@ -524,6 +525,7 @@
     }else{
         patienModel = nil;
     }
+    
     if (conversation.conversationType == eConversationTypeChat) {
         cell.name = patienModel.Name;
         if ([patienModel.Name length]==0) {
@@ -540,7 +542,7 @@
         }
         else
         {
-            cell.placeholderImage = [UIImage imageNamed:@"chatListCellHead.png"];
+            cell.placeholderImage = [UIImage imageNamed:@"chatListCellHead"];
         }
         
         

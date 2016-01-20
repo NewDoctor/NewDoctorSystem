@@ -124,26 +124,34 @@
     
     [headButton addTarget:self action:@selector(head:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:headButton];
-    
-    UIView * nameView = [[UIView alloc] init];
-    nameView.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:nameView];
-    
-    [headButton mas_makeConstraints:^(MX_MASConstraintMaker *make) {
+     [headButton mas_makeConstraints:^(MX_MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left).with.offset(21);
         make.top.equalTo(self.view.mas_top).with.offset(18+TOPHEIGHT);
         make.size.mas_equalTo(CGSizeMake(167.0/750.0*SCREENWIDTH, 167.0/750.0*SCREENWIDTH));
     }];
     
+    UIView * backView = [[UIView alloc] init];
+    backView.backgroundColor = [UIColor whiteColor];
+    backView.alpha=0.6;
+    [self.view addSubview:backView];
+    [backView mas_makeConstraints:^(MX_MASConstraintMaker *make) {
+        make.left.equalTo(headButton.mas_right).with.offset(8);
+        make.right.equalTo(self.view.mas_right).with.offset(-21);
+        make.height.equalTo(headButton.mas_height);
+        make.top.equalTo(self.view.mas_top).with.offset(18+TOPHEIGHT);
+    }];
+
+    
+    UIView * nameView = [[UIView alloc] init];
+    nameView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:nameView];
     [nameView mas_makeConstraints:^(MX_MASConstraintMaker *make) {
         make.left.equalTo(headButton.mas_right).with.offset(8);
         make.right.equalTo(self.view.mas_right).with.offset(-21);
         make.height.equalTo(headButton.mas_height);
         make.top.equalTo(self.view.mas_top).with.offset(18+TOPHEIGHT);
     }];
-    UIImage*img =[UIImage imageNamed:@"按钮框"];
-    [nameView setBackgroundColor:[UIColor colorWithPatternImage:img]];
-   
+  
     userName=[[UILabel alloc] initWithFrame:CGRectMake(5, 10, appWidth-29-10, 20)];
     userName.text=[MDUserVO userVO].userName;
     

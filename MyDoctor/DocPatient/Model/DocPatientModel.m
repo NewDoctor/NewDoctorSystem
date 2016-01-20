@@ -13,4 +13,6 @@
 @synthesize Name;
 @synthesize phone;
 @synthesize ImagePath;
+@synthesize HxName;
+
 @end

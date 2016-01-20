@@ -57,15 +57,8 @@
     NSString * parameters = [NSString stringWithFormat:@"%d@`3@`3@`%@@`1@`3@`%@@`",self.methodNum,date,self.parameter];
     //参数加密
     parameters = [self GTMEncodeTest:parameters];
-
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     session.responseSerializer=[AFHTTPResponseSerializer serializer];
-//    [session POST:self.path parameters:@{@"b":parameters} success:^(NSURLSessionDataTask *task, id responseObject) {
-//        [self.delegate sendInfoFromRequest:responseObject andPath:self.path number:self.methodNum];
-//        NSLog(@"成功");
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        NSLog(@"失败");        
-//    }];
     
     
     [session POST:self.path parameters:@{@"b":parameters} progress:^(NSProgress * _Nonnull uploadProgress) {

@@ -33,8 +33,10 @@
     firstShow=1;
     self.navigationItem.title=@"医生";
     
-    [self setNavigationBarWithrightBtn:@"通知" leftBtn:@"下拉框"];
-    
+//    [self setNavigationBarWithrightBtn:@"通知" leftBtn:@"下拉框"];
+    [self setNavigationBarWithrightBtn:@"通知" leftBtn:nil];
+    [self.rightBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+
     [self.leftBtn addTarget:self action:@selector(requirBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     self.leftBtn.width = 80;
     [self.leftBtn setTitle:@"在线" forState:UIControlStateNormal];

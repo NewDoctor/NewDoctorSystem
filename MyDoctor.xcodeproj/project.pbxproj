@@ -79,6 +79,10 @@
 		155CEC421C0E8371006B5CFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 155CEC411C0E8371006B5CFA /* Foundation.framework */; };
 		155CEC481C0E8993006B5CFA /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 155CEC461C0E8993006B5CFA /* GTMBase64.m */; };
 		156263071C293C8E00B725EF /* MyDoctor.c in Sources */ = {isa = PBXBuildFile; fileRef = 156263051C293C8E00B725EF /* MyDoctor.c */; };
+		1572AB9B1C4F1C170088DC90 /* 设置@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1572AB991C4F1C170088DC90 /* 设置@2x.png */; };
+		1572AB9C1C4F1C170088DC90 /* 通知@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1572AB9A1C4F1C170088DC90 /* 通知@2x.png */; };
+		1572AB9E1C4F1C3A0088DC90 /* 通知@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1572AB9D1C4F1C3A0088DC90 /* 通知@3x.png */; };
+		1572ABA01C4F20980088DC90 /* 设置@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1572AB9F1C4F20980088DC90 /* 设置@3x.png */; };
 		1578343C1C20051E00421167 /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1578343B1C20051E00421167 /* FileUtils.m */; };
 		15800EC61C479B4700FCB87B /* callRing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 15800EC31C479B4700FCB87B /* callRing.mp3 */; };
 		15800EC71C479B4700FCB87B /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15800EC51C479B4700FCB87B /* CallViewController.m */; };
@@ -720,6 +724,10 @@
 		155CEC471C0E8993006B5CFA /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		156263051C293C8E00B725EF /* MyDoctor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyDoctor.c; sourceTree = "<group>"; };
 		156263061C293C8E00B725EF /* MyDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDoctor.h; sourceTree = "<group>"; };
+		1572AB991C4F1C170088DC90 /* 设置@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置@2x.png"; sourceTree = "<group>"; };
+		1572AB9A1C4F1C170088DC90 /* 通知@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通知@2x.png"; sourceTree = "<group>"; };
+		1572AB9D1C4F1C3A0088DC90 /* 通知@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通知@3x.png"; sourceTree = "<group>"; };
+		1572AB9F1C4F20980088DC90 /* 设置@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置@3x.png"; sourceTree = "<group>"; };
 		1578343A1C20051E00421167 /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileUtils.h; path = FileUtils/FileUtils.h; sourceTree = "<group>"; };
 		1578343B1C20051E00421167 /* FileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileUtils.m; path = FileUtils/FileUtils.m; sourceTree = "<group>"; };
 		15800EC31C479B4700FCB87B /* callRing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = callRing.mp3; sourceTree = "<group>"; };
@@ -1740,6 +1748,8 @@
 		153ED8111C08022E00171DFA /* 2x */ = {
 			isa = PBXGroup;
 			children = (
+				1572AB991C4F1C170088DC90 /* 设置@2x.png */,
+				1572AB9A1C4F1C170088DC90 /* 通知@2x.png */,
 				6ABBAD051C3B735D008F064C /* 进入@2x.png */,
 				6ABBACED1C3A371C008F064C /* 评分0@2x.png */,
 				6ABBACEE1C3A371C008F064C /* 评分1@2x.png */,
@@ -1788,6 +1798,8 @@
 		153ED81A1C08022E00171DFA /* 3x */ = {
 			isa = PBXGroup;
 			children = (
+				1572AB9D1C4F1C3A0088DC90 /* 通知@3x.png */,
+				1572AB9F1C4F20980088DC90 /* 设置@3x.png */,
 				6ABBAD071C3B7366008F064C /* 进入@3x.png */,
 				6ABBACF91C3A372D008F064C /* 评分0@3x.png */,
 				6ABBACFA1C3A372D008F064C /* 评分1@3x.png */,
@@ -3637,6 +3649,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1572AB9B1C4F1C170088DC90 /* 设置@2x.png in Resources */,
 				6ABD0C081C321EF900FEE47F /* 询医@3x.png in Resources */,
 				15800FE91C4DCF3A00FCB87B /* MJRefresh.bundle in Resources */,
 				6AB9B1341C2013D0004BF6A7 /* 123.jpg in Resources */,
@@ -3814,6 +3827,7 @@
 				6ABD0BF91C321C9D00FEE47F /* serviceback@3x.png in Resources */,
 				6AB9BC541C2BEA7B004BF6A7 /* tabbar_settingHL.png in Resources */,
 				6AB9BADF1C2BE419004BF6A7 /* MWPhotoBrowser.bundle in Resources */,
+				1572AB9E1C4F1C3A0088DC90 /* 通知@3x.png in Resources */,
 				6AB9BBFD1C2BEA0E004BF6A7 /* VoiceSearchFeedback020@2x.png in Resources */,
 				6AB9BCD81C2BED00004BF6A7 /* chatBar_more_location.png in Resources */,
 				6AB9BC7A1C2BEC62004BF6A7 /* chat_location_detail_disclosureHL.png in Resources */,
@@ -3822,6 +3836,7 @@
 				6AB9BBF51C2BEA0E004BF6A7 /* VoiceSearchFeedback016@2x.png in Resources */,
 				6AB9BD0B1C2BED22004BF6A7 /* chat_sender_audio_playing_003@2x.png in Resources */,
 				153ED8611C0C17E700171DFA /* 搜索药品@3x.png in Resources */,
+				1572ABA01C4F20980088DC90 /* 设置@3x.png in Resources */,
 				6AB9BC691C2BEC46004BF6A7 /* chatBar_more_face@2x.png in Resources */,
 				153ED85F1C0C17DC00171DFA /* 搜索药品@2x.png in Resources */,
 				6AB9BC9D1C2BECC6004BF6A7 /* chatBar_faceSelected@2x.png in Resources */,
@@ -3891,6 +3906,7 @@
 				6AB9BBF61C2BEA0E004BF6A7 /* VoiceSearchFeedback017.png in Resources */,
 				6ABBAD001C3A372D008F064C /* 评分1@3x.png in Resources */,
 				6AB9BCC71C2BECF1004BF6A7 /* chatBar_colorMore_videoSelected@2x.png in Resources */,
+				1572AB9C1C4F1C170088DC90 /* 通知@2x.png in Resources */,
 				6ABBACF61C3A371C008F064C /* 评分3@2x.png in Resources */,
 				6AB9B13C1C2013D0004BF6A7 /* demo-avatar-jobs.png in Resources */,
 				6AB9BCA41C2BECC6004BF6A7 /* chatBar_moreSelected.png in Resources */,

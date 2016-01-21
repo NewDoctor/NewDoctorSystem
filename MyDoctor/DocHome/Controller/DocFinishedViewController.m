@@ -10,6 +10,7 @@
 #import "DocServiceFolerVO.h"
 #import "DocHomeTableViewCell.h"
 #import "MDRequestModel.h"
+#import "MJRefresh.h"
 
 @interface DocFinishedViewController ()<sendInfoToCtr>
 
@@ -18,15 +19,36 @@
 @implementation DocFinishedViewController
 {
     NSMutableArray * dataArray;
-    
+    int curruntPage;
 }
 @synthesize tableView = _tableView;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    curruntPage=1;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     dataArray=[[NSMutableArray alloc] init];
-    [self postRequest];
     [self TableView];
+    [self refreshAndLoad];
+}
+-(void)refreshAndLoad
+{
+    __unsafe_unretained __typeof(self) weakSelf = self;
+    
+    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        curruntPage = 1;
+        [weakSelf postRequest];
+    }];
+    
+    // 马上进入刷新状态
+    [_tableView.mj_header beginRefreshing];
+    
+    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        curruntPage ++;
+        [weakSelf postRequest];
+    }];
+    
 }
 #pragma mark - POST请求
 - (void)postRequest
@@ -34,7 +56,11 @@
     MDRequestModel * model = [[MDRequestModel alloc] init];
     model.path = MDPath;
     model.methodNum = 20202;
-    NSString * parameter=[NSString stringWithFormat:@"%@@`%d@`%d@`%d",[MDUserVO userVO].userID,10,0,0];
+    NSString * pageSize = @"10";
+    int pageIndex = curruntPage;
+    NSString * lastID = @"0";
+    
+    NSString * parameter=[NSString stringWithFormat:@"%@@`%@@`%d@`%@",[MDUserVO userVO].userID,pageSize,pageIndex,lastID];
     model.parameter = parameter;
     model.delegate = self;
     [model starRequest];
@@ -44,7 +70,9 @@
 -(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
 {
     //回馈数据
-    
+    if (curruntPage == 1) {
+        [dataArray removeAllObjects];
+    }
     NSLog(@"完成信息%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
     
     NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
@@ -57,7 +85,8 @@
     sfv2.Time=@"2015年12月11日  13:00";
     [dataArray addObject:sfv2];
     [_tableView reloadData];
-    
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {

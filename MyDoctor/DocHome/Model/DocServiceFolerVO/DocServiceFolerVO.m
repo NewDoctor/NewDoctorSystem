@@ -17,5 +17,5 @@
 @synthesize headImg;
 @synthesize name;
 @synthesize details;
-
+@synthesize Phone;
 @end

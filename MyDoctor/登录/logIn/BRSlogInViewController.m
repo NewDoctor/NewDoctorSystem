@@ -88,6 +88,7 @@
     NSString * hxPwd = [obj objectForKey:@"hxPwd"];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"%@",[NSString stringWithFormat:@"%@%@",user.photourl,user.photo]);
         NSData * data = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",user.photourl,user.photo]]];
         UIImage *headImg = [[UIImage alloc]initWithData:data];
         if (data != nil) {

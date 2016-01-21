@@ -19,23 +19,37 @@
 @implementation DocCallRecordViewController
 {
     NSMutableArray * dataArray;
-    
+    int curruntPage;
 }
 @synthesize tableView = _tableView;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+    curruntPage=1;
     dataArray=[[NSMutableArray alloc] init];
 //    [self postRequest];
-     [self TableView];
-    if(!_tableView.header.isRefreshing) {
-        [_tableView.header beginRefreshing];
-    }
-    [self postRequest];
-    __weak typeof(self) weakSelf = self;
-    [_tableView addLegendHeaderWithRefreshingBlock:^{
+    [self TableView];
+    [self refreshAndLoad];
+}
+-(void)refreshAndLoad
+{
+    __unsafe_unretained __typeof(self) weakSelf = self;
+    
+    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        curruntPage = 1;
         [weakSelf postRequest];
     }];
+    
+    // 马上进入刷新状态
+    [_tableView.mj_header beginRefreshing];
+    
+    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        curruntPage ++;
+        [weakSelf postRequest];
+    }];
+    
 }
 
 #pragma mark - POST请求
@@ -44,7 +58,11 @@
     MDRequestModel * model = [[MDRequestModel alloc] init];
     model.path = MDPath;
     model.methodNum = 20301;
-    NSString * parameter=[NSString stringWithFormat:@"%@@`%d@`%d@`%d",[MDUserVO userVO].userID,10,0,0];
+    NSString * pageSize = @"10";
+    int pageIndex = curruntPage;
+    NSString * lastID = @"0";
+    
+    NSString * parameter=[NSString stringWithFormat:@"%@@`%@@`%d@`%@",[MDUserVO userVO].userID,pageSize,pageIndex,lastID];
     model.parameter = parameter;
     model.delegate = self;
     [model starRequest];
@@ -54,7 +72,9 @@
 -(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
 {
     //回馈数据
-    [dataArray removeAllObjects];
+    if (curruntPage == 1) {
+        [dataArray removeAllObjects];
+    }
     NSLog(@"电话信息%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
     
     NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
@@ -66,6 +86,7 @@
         sfv2.Id=[array[i] objectForKey:@"id"];
         sfv2.serviceType=@"电话咨询";
         sfv2.serviceStatus=@"已完成";
+        sfv2.Phone=[array[i] objectForKey:@"Phone"];
         sfv2.name=[array[i] objectForKey:@"RealName"];
         sfv2.headImg = [NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[array[i] objectForKey:@"Photo"]];
         NSLog(@"------------%@",[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[array[i] objectForKey:@"Photo"]]);
@@ -74,8 +95,8 @@
     }
     
     [_tableView reloadData];
-    [_tableView.header endRefreshing];
-    
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,7 +117,6 @@
     _tableView.separatorStyle = NO;
     [self.view addSubview:_tableView];
     [_tableView reloadData];
-    [_tableView.header endRefreshing];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *Cell=@"HeaderCell";
@@ -126,11 +146,14 @@
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.selected = NO;
     // 带字典的通知
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:@"12" forKey:@"text"];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"pushViewInDocHome" object:nil userInfo:userInfo];
-    
+//    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:@"12" forKey:@"text"];
+//    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"pushViewInDocHome" object:nil userInfo:userInfo];
+    DocServiceFolerVO * service=dataArray[indexPath.row];
+    NSString * phoneNum = [NSString stringWithFormat:@"tel:%@",service.Phone];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNum]];
 }
+
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 120;

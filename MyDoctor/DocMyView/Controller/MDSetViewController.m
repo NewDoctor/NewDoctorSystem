@@ -8,6 +8,7 @@
 
 #import "MDSetViewController.h"
 #import "EaseMob.h"
+#import "BRSChangePasswordViewController.h"
 
 @interface MDSetViewController ()
 
@@ -86,6 +87,9 @@
     switch (indexPath.row) {
         case 0:
         {
+            BRSChangePasswordViewController * avc=[[BRSChangePasswordViewController alloc] init];
+            [self.navigationController pushViewController:avc animated:YES];
+            break;
             break;
         }
         case 1:

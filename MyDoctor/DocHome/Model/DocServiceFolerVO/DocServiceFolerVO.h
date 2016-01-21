@@ -17,4 +17,5 @@
 @property (nonatomic,strong) NSString * headImg;
 @property (nonatomic,strong) NSString * name;
 @property (nonatomic,strong) NSString * details;
+@property (nonatomic,strong) NSString * Phone;
 @end

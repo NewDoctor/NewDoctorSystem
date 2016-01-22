@@ -588,6 +588,8 @@
 		6ABD0C071C321EF900FEE47F /* 问药@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABD0C031C321EF900FEE47F /* 问药@3x.png */; };
 		6ABD0C081C321EF900FEE47F /* 询医@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABD0C041C321EF900FEE47F /* 询医@3x.png */; };
 		6ABD0C091C321EF900FEE47F /* 照护@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABD0C051C321EF900FEE47F /* 照护@3x.png */; };
+		6AE2EBFA1C522E6A00AA4D51 /* MDForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE2EBF71C522E6A00AA4D51 /* MDForgetViewController.m */; };
+		6AE2EBFB1C522E6A00AA4D51 /* MDResetPsdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE2EBF91C522E6A00AA4D51 /* MDResetPsdViewController.m */; };
 		6AF202311C0B3BAA00933EAF /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF202301C0B3BAA00933EAF /* background@2x.png */; };
 		6AF202351C0B45C300933EAF /* c.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF202341C0B45C300933EAF /* c.png */; };
 		6AF202371C0B45C600933EAF /* 默认头像@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF202361C0B45C600933EAF /* 默认头像@3x.png */; };
@@ -1550,6 +1552,10 @@
 		6ABD0C031C321EF900FEE47F /* 问药@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问药@3x.png"; sourceTree = "<group>"; };
 		6ABD0C041C321EF900FEE47F /* 询医@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "询医@3x.png"; sourceTree = "<group>"; };
 		6ABD0C051C321EF900FEE47F /* 照护@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "照护@3x.png"; sourceTree = "<group>"; };
+		6AE2EBF61C522E6A00AA4D51 /* MDForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDForgetViewController.h; sourceTree = "<group>"; };
+		6AE2EBF71C522E6A00AA4D51 /* MDForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDForgetViewController.m; sourceTree = "<group>"; };
+		6AE2EBF81C522E6A00AA4D51 /* MDResetPsdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDResetPsdViewController.h; sourceTree = "<group>"; };
+		6AE2EBF91C522E6A00AA4D51 /* MDResetPsdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDResetPsdViewController.m; sourceTree = "<group>"; };
 		6AF202301C0B3BAA00933EAF /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		6AF202341C0B45C300933EAF /* c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c.png; sourceTree = "<group>"; };
 		6AF202361C0B45C600933EAF /* 默认头像@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "默认头像@3x.png"; sourceTree = "<group>"; };
@@ -2090,6 +2096,10 @@
 				1590496D1C069FA600EE51FB /* BRSSignIn2ViewController.m */,
 				1590497B1C06A71000EE51FB /* BRSEndSignlnViewController.h */,
 				1590497C1C06A71000EE51FB /* BRSEndSignlnViewController.m */,
+				6AE2EBF61C522E6A00AA4D51 /* MDForgetViewController.h */,
+				6AE2EBF71C522E6A00AA4D51 /* MDForgetViewController.m */,
+				6AE2EBF81C522E6A00AA4D51 /* MDResetPsdViewController.h */,
+				6AE2EBF91C522E6A00AA4D51 /* MDResetPsdViewController.m */,
 				159049701C069FA600EE51FB /* BRSTextField.h */,
 				159049711C069FA600EE51FB /* BRSTextField.m */,
 			);
@@ -4194,6 +4204,7 @@
 				6AB9BAB21C2BE32C004BF6A7 /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				15F0E0381C506FFF003B5B2F /* MJRefreshBackFooter.m in Sources */,
 				6AB9BB1E1C2BE6C1004BF6A7 /* SRSlimeView.m in Sources */,
+				6AE2EBFA1C522E6A00AA4D51 /* MDForgetViewController.m in Sources */,
 				153ED8431C083DB500171DFA /* KTSelectDatePicker.m in Sources */,
 				153C1E801C03FB8C00F87014 /* MX_MASConstraint.m in Sources */,
 				15FBDD571C15583A009E7E39 /* DocAllPatientViewController.m in Sources */,
@@ -4209,6 +4220,7 @@
 				15800F201C479C4F00FCB87B /* SettingsViewController.m in Sources */,
 				153ED8441C083DB500171DFA /* KTSelectPickerView.m in Sources */,
 				15800EDF1C479BB800FCB87B /* ApplyViewController.m in Sources */,
+				6AE2EBFB1C522E6A00AA4D51 /* MDResetPsdViewController.m in Sources */,
 				6A6C995F1C4778BC00643C97 /* DocHomeTableViewCell.m in Sources */,
 				6AB9BB561C2BE80B004BF6A7 /* FacialView.m in Sources */,
 				6AB9BA511C2BE25D004BF6A7 /* EMCDDeviceManager+Media.m in Sources */,

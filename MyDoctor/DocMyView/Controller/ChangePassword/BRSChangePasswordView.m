@@ -157,7 +157,7 @@
         finishButton.layer.cornerRadius = 8;
         finishButton.layer.masksToBounds = YES;
         
-        finishButton.backgroundColor = [UIColor colorWithRed:20.0/255.0 green:204.0/255.0 blue:164.0/255.0 alpha:1.0];
+        finishButton.backgroundColor = RedColor;
         [finishButton setTitle:@"完成" forState:UIControlStateNormal];
         [self addSubview:finishButton];
         [finishButton mas_makeConstraints:^(MX_MASConstraintMaker *make) {
@@ -172,7 +172,7 @@
 -(void)finish{
     if (passwordTF.text.length!=0) {
         if ([newPasswordTF.text isEqualToString:againPasswordTF.text] &&newPasswordTF.text.length!=0) {
-            finishButton.enabled = NO;
+//            finishButton.enabled = NO;
             
             [self.controller doChange:passwordTF.text andNewPassword:newPasswordTF.text];
             

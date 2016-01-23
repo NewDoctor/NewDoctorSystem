@@ -60,12 +60,13 @@
 -(void)doChange:(NSString *)currentstr andNewPassword:(NSString *)newPassword {
    
     MDRequestModel * model = [[MDRequestModel alloc] init];
+    model.methodNum = 10111;
     model.path = MDPath;
-    model.methodNum = 20101;
-    NSString * parameter=[NSString stringWithFormat:@"%@@`%@@`%@", [MDUserVO userVO].userID,currentstr,newPassword];
-    model.parameter = parameter;
     model.delegate = self;
+    NSString * userId = [MDUserVO userVO].userID;
+    model.parameter = [NSString stringWithFormat:@"%@@`%@@`%@",userId,currentstr,newPassword];
     [model starRequest];
+    NSLog(@"%@   %@  %@",userId,currentstr,newPassword);
     
     
 //    MXKit *MXObj = [MXKit shareMXKit];
@@ -82,14 +83,31 @@
 //    }];
 //
 }
-//请求数据回调
+#pragma mark - sendInfoToCtr
+
 -(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
 {
-    //回馈数据
-    NSLog(@"登录信息%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
-    
-    NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
-    NSLog(@"%@",dic);
+    NSDictionary * dictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
+    NSLog(@"%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    if ([[dictionary objectForKey:@"success"]intValue] == 1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"密码修改成功" message:nil delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"旧密码错误，请重新填写" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+//        [passwordTF becomeFirstResponder];
+        
+        [alert show];
+    }
+}
+
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if ([alertView.title isEqualToString:@"密码修改成功"]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 -(void)backBtnClick
 {

@@ -9,7 +9,7 @@
 #import "MDBaseViewController.h"
 #import "MDConst.h"
 
-@interface BRSChangePasswordViewController : MDBaseViewController<UITableViewDataSource, UITableViewDelegate>
+@interface BRSChangePasswordViewController : MDBaseViewController<UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>
 -(void)doChange:(NSString *)currentstr andNewPassword:(NSString *)newPassword;
 
 @end

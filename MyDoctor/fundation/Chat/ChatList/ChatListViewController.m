@@ -172,7 +172,7 @@
                         
                         if(result)
                         {
-                            patientModel.ImagePath = [NSString stringWithFormat:@"/Library/Caches/PatientsIMAGE/%@.png",[dic objectForKey:@"Phone"]];
+                            patientModel.ImagePath = [NSString stringWithFormat:@"/Library/Caches/PatientsIMAGE/%@.png",[dic objectForKey:@"HxName"]];
                             NSLog(@"%@",patientModel.ImagePath);
                             
                             [attachmentArr addObject:patientModel];

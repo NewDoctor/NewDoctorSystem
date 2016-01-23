@@ -81,12 +81,7 @@
     NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
     NSLog(@"%@",dic);
     
-    DocServiceFolerVO * sfv2=[[DocServiceFolerVO alloc] init];
-    sfv2.serviceType=@"电话咨询";
-    sfv2.serviceStatus=@"未完成";
-    sfv2.headImg = @"叔叔.jpg";
-    sfv2.Time=@"2015年12月11日  13:00";
-    [dataArray addObject:sfv2];
+    
     [_tableView reloadData];
     [self.tableView.mj_header endRefreshing];
     [self.tableView.mj_footer endRefreshing];

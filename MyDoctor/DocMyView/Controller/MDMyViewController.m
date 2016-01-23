@@ -161,7 +161,7 @@
     userName.tag = 11;
     
     UILabel * signature=[[UILabel alloc] initWithFrame:CGRectMake(5, 30, appWidth-29-10, 20)];
-    signature.text=@"人老心不老";
+    signature.text=@"门诊专业医生";
     signature.textColor=[UIColor grayColor];
     signature.font=[UIFont systemFontOfSize:12];
     [nameView addSubview:userName];

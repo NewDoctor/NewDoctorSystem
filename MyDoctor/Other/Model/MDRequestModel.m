@@ -65,7 +65,7 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [self.delegate sendInfoFromRequest:responseObject andPath:self.path number:self.methodNum];
-        [hud hide:YES afterDelay:0.5];
+        [hud hide:YES afterDelay:0];
         NSLog(@"成功");
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"失败");

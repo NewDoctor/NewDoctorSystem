@@ -98,7 +98,7 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:NO];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUnreadCount:) name:@"setreadCount" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUnreadCount:) name:@"setUnReadCount" object:nil];
     
     
     return YES;
@@ -107,7 +107,7 @@
 
 -(void)setUnreadCount:(NSNotification *)notif
 {
-    NSString * count = [NSString stringWithFormat:@"%@",[notif.userInfo objectForKey:@"unReadCount"]];
+    NSString * count = [notif object];
     if ([count isEqualToString:@"0"]) {
         serviceNav.tabBarItem.badgeValue = nil;
     }

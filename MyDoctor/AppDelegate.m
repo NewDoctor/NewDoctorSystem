@@ -177,7 +177,9 @@
 -(void)backselected1
 {
     // 跳到指定页面
-    [self.tabBarController setSelectedIndex:0];
+//    [self.tabBarController setSelectedIndex:0];
+    [self logIn];
+    
 }
 
 /** 远程通知注册成功委托 */

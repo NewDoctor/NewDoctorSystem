@@ -161,7 +161,7 @@
     userName.tag = 11;
     
     UILabel * signature=[[UILabel alloc] initWithFrame:CGRectMake(5, 30, appWidth-29-10, 20)];
-    signature.text=@"人老心不老";
+    signature.text=@"门诊专业医生";
     signature.textColor=[UIColor grayColor];
     signature.font=[UIFont systemFontOfSize:12];
     [nameView addSubview:userName];
@@ -372,7 +372,7 @@
         
         MDRequestModel * model = [[MDRequestModel alloc] init];
         model.path = MDPath;
-        model.methodNum = 10103;
+        model.methodNum = 20102;
         model.delegate = self;
         int userId = [[MDUserVO userVO].userID intValue];
         model.parameter = [NSString stringWithFormat:@"%d@`%@",userId,headImg];
@@ -492,7 +492,7 @@
 #pragma mark - asendInfoToCtrDelegate
 -(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
 {
-    MDLog(@"头像设置%@",[[NSString alloc]initWithData:response encoding:NSUTF8StringEncoding]);
+    NSLog(@"头像设置%@",[[NSString alloc]initWithData:response encoding:NSUTF8StringEncoding]);
     
 //    MDLog(@"");
 }

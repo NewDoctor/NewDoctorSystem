@@ -681,6 +681,38 @@
             endingLineNumber = "113"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DocFinishedViewController tableView:cellForRowAtIndexPath:]"
+                  moduleName = "MyDoctor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/DocHome/Controller/DocFinishedViewController.m"
+                  timestampString = "475203186.411213"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DocFinishedViewController tableView:cellForRowAtIndexPath:]"
+                  moduleName = "MyDoctor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/DocHome/Controller/DocFinishedViewController.m"
+                  timestampString = "475203186.411556"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "288">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -914,7 +946,7 @@
                   moduleName = "MyDoctor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/%E7%99%BB%E5%BD%95/logIn/BRSlogInViewController.m"
-                  timestampString = "475118965.813192"
+                  timestampString = "475203186.422706"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "95"
@@ -929,7 +961,7 @@
                   moduleName = "MyDoctor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/%E7%99%BB%E5%BD%95/logIn/BRSlogInViewController.m"
-                  timestampString = "475118965.813428"
+                  timestampString = "475203186.423627"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "97"

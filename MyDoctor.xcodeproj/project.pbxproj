@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1523EBD61C5306E900321DF8 /* MDChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1523EBD51C5306E900321DF8 /* MDChangePasswordViewController.m */; };
 		1532A6FA1C3F83A200D0582B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1532A6EF1C3F83A200D0582B /* FMDatabase.m */; };
 		1532A6FB1C3F83A200D0582B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1532A6F11C3F83A200D0582B /* FMDatabaseAdditions.m */; };
 		1532A6FC1C3F83A200D0582B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1532A6F31C3F83A200D0582B /* FMDatabasePool.m */; };
@@ -159,8 +160,6 @@
 		15F0E0541C507036003B5B2F /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F0E04F1C507036003B5B2F /* MJRefreshGifHeader.m */; };
 		15F0E0551C507036003B5B2F /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F0E0511C507036003B5B2F /* MJRefreshNormalHeader.m */; };
 		15F0E0561C507036003B5B2F /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F0E0531C507036003B5B2F /* MJRefreshStateHeader.m */; };
-		15F0E0651C507582003B5B2F /* BRSChangePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F0E0621C507582003B5B2F /* BRSChangePasswordView.m */; };
-		15F0E0661C507582003B5B2F /* BRSChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F0E0641C507582003B5B2F /* BRSChangePasswordViewController.m */; };
 		15F0E0691C507AFD003B5B2F /* mx_passwordImage_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15F0E0671C507AFD003B5B2F /* mx_passwordImage_phone@2x.png */; };
 		15F0E06A1C507AFD003B5B2F /* mx_tabLine_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15F0E0681C507AFD003B5B2F /* mx_tabLine_phone@2x.png */; };
 		15FBDD491C152B56009E7E39 /* WbToolBarFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FBDD481C152B56009E7E39 /* WbToolBarFour.m */; };
@@ -617,6 +616,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1523EBD41C5306E900321DF8 /* MDChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDChangePasswordViewController.h; sourceTree = "<group>"; };
+		1523EBD51C5306E900321DF8 /* MDChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDChangePasswordViewController.m; sourceTree = "<group>"; };
 		1532A6EE1C3F83A200D0582B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		1532A6EF1C3F83A200D0582B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		1532A6F01C3F83A200D0582B /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -945,10 +946,6 @@
 		15F0E0511C507036003B5B2F /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshNormalHeader.m; sourceTree = "<group>"; };
 		15F0E0521C507036003B5B2F /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshStateHeader.h; sourceTree = "<group>"; };
 		15F0E0531C507036003B5B2F /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshStateHeader.m; sourceTree = "<group>"; };
-		15F0E0611C507582003B5B2F /* BRSChangePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSChangePasswordView.h; sourceTree = "<group>"; };
-		15F0E0621C507582003B5B2F /* BRSChangePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSChangePasswordView.m; sourceTree = "<group>"; };
-		15F0E0631C507582003B5B2F /* BRSChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSChangePasswordViewController.h; sourceTree = "<group>"; };
-		15F0E0641C507582003B5B2F /* BRSChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSChangePasswordViewController.m; sourceTree = "<group>"; };
 		15F0E0671C507AFD003B5B2F /* mx_passwordImage_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mx_passwordImage_phone@2x.png"; sourceTree = "<group>"; };
 		15F0E0681C507AFD003B5B2F /* mx_tabLine_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mx_tabLine_phone@2x.png"; sourceTree = "<group>"; };
 		15FBDD471C152B56009E7E39 /* WbToolBarFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WbToolBarFour.h; sourceTree = "<group>"; };
@@ -2522,17 +2519,6 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		15F0E05A1C507573003B5B2F /* ChangePassword */ = {
-			isa = PBXGroup;
-			children = (
-				15F0E0611C507582003B5B2F /* BRSChangePasswordView.h */,
-				15F0E0621C507582003B5B2F /* BRSChangePasswordView.m */,
-				15F0E0631C507582003B5B2F /* BRSChangePasswordViewController.h */,
-				15F0E0641C507582003B5B2F /* BRSChangePasswordViewController.m */,
-			);
-			path = ChangePassword;
-			sourceTree = "<group>";
-		};
 		15FBDD511C15574B009E7E39 /* DoctorPatient */ = {
 			isa = PBXGroup;
 			children = (
@@ -2717,17 +2703,18 @@
 		6A6C999A1C477B4100643C97 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				15F0E05A1C507573003B5B2F /* ChangePassword */,
+				6A6C99BF1C477B5500643C97 /* MDMyViewController.h */,
+				6A6C99C01C477B5500643C97 /* MDMyViewController.m */,
 				6A6C99B71C477B5500643C97 /* DocMyPatientsViewController.h */,
 				6A6C99B81C477B5500643C97 /* DocMyPatientsViewController.m */,
 				6A6C99BB1C477B5500643C97 /* MDDataViewController.h */,
 				6A6C99BC1C477B5500643C97 /* MDDataViewController.m */,
 				6A6C99BD1C477B5500643C97 /* MDFeedBackViewController.h */,
 				6A6C99BE1C477B5500643C97 /* MDFeedBackViewController.m */,
-				6A6C99BF1C477B5500643C97 /* MDMyViewController.h */,
-				6A6C99C01C477B5500643C97 /* MDMyViewController.m */,
 				6A6C99C11C477B5500643C97 /* MDSetViewController.h */,
 				6A6C99C21C477B5500643C97 /* MDSetViewController.m */,
+				1523EBD41C5306E900321DF8 /* MDChangePasswordViewController.h */,
+				1523EBD51C5306E900321DF8 /* MDChangePasswordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3720,7 +3707,7 @@
 				TargetAttributes = {
 					15AE53681C02F0680013FF1B = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 5XDQ36V7UQ;
+						DevelopmentTeam = 8TUZW57LD3;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -4184,6 +4171,7 @@
 				15FBDD641C155B11009E7E39 /* DocPatientFolerVO.m in Sources */,
 				6A6523451C1E930E00227C63 /* SDWebImageDownloaderOperation.m in Sources */,
 				15AE536F1C02F0680013FF1B /* main.m in Sources */,
+				1523EBD61C5306E900321DF8 /* MDChangePasswordViewController.m in Sources */,
 				15F0E0441C507017003B5B2F /* MJRefreshAutoStateFooter.m in Sources */,
 				6A6C997C1C47793200643C97 /* DocRecordViewController.m in Sources */,
 				6AB9BA551C2BE25D004BF6A7 /* EMCDDeviceManagerBase.m in Sources */,
@@ -4228,7 +4216,6 @@
 				159049751C069FA600EE51FB /* BRSSignIn2ViewController.m in Sources */,
 				6AB9BB6E1C2BE845004BF6A7 /* EMChatVideoBubbleView.m in Sources */,
 				6AB9BAAF1C2BE32C004BF6A7 /* UIImage+EMGIF.m in Sources */,
-				15F0E0661C507582003B5B2F /* BRSChangePasswordViewController.m in Sources */,
 				6AB9BA501C2BE25D004BF6A7 /* EMAudioRecorderUtil.m in Sources */,
 				15FBDD491C152B56009E7E39 /* WbToolBarFour.m in Sources */,
 				6AB9BB771C2BE866004BF6A7 /* EMChatViewCell.m in Sources */,
@@ -4274,7 +4261,6 @@
 				159049731C069FA600EE51FB /* BRSNewPageViewController.m in Sources */,
 				15FBDD541C1557CB009E7E39 /* DocPatientViewController.m in Sources */,
 				15800EF71C479BE600FCB87B /* MainViewController.m in Sources */,
-				15F0E0651C507582003B5B2F /* BRSChangePasswordView.m in Sources */,
 				6AB9BA151C2BE1E8004BF6A7 /* EMTextView.m in Sources */,
 				6AB9BA531C2BE25D004BF6A7 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				6A6C99C51C477B5500643C97 /* MDDataViewController.m in Sources */,
@@ -4439,7 +4425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Haocheng Zhang (N8TXHQB3RY)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Saibainuo Technology Co., Ltd. (8TUZW57LD3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4465,7 +4451,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
+				PROVISIONING_PROFILE = "255cb888-a7f9-4472-b3cb-2527389643be";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "ad hoc distribution";
@@ -4586,7 +4572,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Haocheng Zhang (N8TXHQB3RY)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Saibainuo Technology Co., Ltd. (8TUZW57LD3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4612,7 +4598,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
+				PROVISIONING_PROFILE = "255cb888-a7f9-4472-b3cb-2527389643be";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -4621,7 +4607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Haocheng Zhang (N8TXHQB3RY)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Saibainuo Technology Co., Ltd. (8TUZW57LD3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4647,7 +4633,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
+				PROVISIONING_PROFILE = "255cb888-a7f9-4472-b3cb-2527389643be";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

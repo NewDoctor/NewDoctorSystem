@@ -372,7 +372,7 @@
         
         MDRequestModel * model = [[MDRequestModel alloc] init];
         model.path = MDPath;
-        model.methodNum = 10103;
+        model.methodNum = 20102;
         model.delegate = self;
         int userId = [[MDUserVO userVO].userID intValue];
         model.parameter = [NSString stringWithFormat:@"%d@`%@",userId,headImg];
@@ -492,7 +492,7 @@
 #pragma mark - asendInfoToCtrDelegate
 -(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
 {
-    MDLog(@"头像设置%@",[[NSString alloc]initWithData:response encoding:NSUTF8StringEncoding]);
+    NSLog(@"头像设置%@",[[NSString alloc]initWithData:response encoding:NSUTF8StringEncoding]);
     
 //    MDLog(@"");
 }

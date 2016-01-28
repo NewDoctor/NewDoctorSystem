@@ -157,32 +157,30 @@
         patientModel.phone = [dic objectForKey:@"Phone"];
         patientModel.HxName= [dic objectForKey:@"HxName"];
         if ([dic objectForKey:@"Photo"]) {
-//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                NSData * data = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[dic objectForKey:@"Photo"]]]];
-                UIImage *headImg = [[UIImage alloc]initWithData:data];
-                if (data != nil) {
-//                    dispatch_async(dispatch_get_main_queue(), ^{
-                        //在这里做UI操作(UI操作都要放在主线程中执行)
-                        FileUtils * fileUtil = [FileUtils sharedFileUtils];
-                        //创建文件下载目录
-                        NSString * path2 = [fileUtil createCachePath:IMAGECACHE];
+            UIImageView * imageView = [[UIImageView alloc] init];
+            [imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[dic objectForKey:@"Photo"]]]];
+            UIImage *headImg = imageView.image;
+
+            
+      FileUtils * fileUtil = [FileUtils sharedFileUtils];
+        //创建文件下载目录
+        NSString * path2 = [fileUtil createCachePath:IMAGECACHE];
+        
+        NSString *uniquePath=[path2 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[dic objectForKey:@"HxName"]]];
+        BOOL result=[UIImagePNGRepresentation(headImg)writeToFile: uniquePath atomically:YES];
+        
+        if(result)
+        {
+            patientModel.ImagePath = [NSString stringWithFormat:@"/Library/Caches/PatientsIMAGE/%@.png",[dic objectForKey:@"HxName"]];
+            NSLog(@"%@",patientModel.ImagePath);
+            
+            [attachmentArr addObject:patientModel];
+            [docPation updatePopAttachmentsDBTable:attachmentArr];
+            [_tableView reloadData];
+        }
+            
                         
-                        NSString *uniquePath=[path2 stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[dic objectForKey:@"HxName"]]];
-                        BOOL result=[UIImagePNGRepresentation(headImg)writeToFile: uniquePath atomically:YES];
-                        
-                        if(result)
-                        {
-                            patientModel.ImagePath = [NSString stringWithFormat:@"/Library/Caches/PatientsIMAGE/%@.png",[dic objectForKey:@"HxName"]];
-                            NSLog(@"%@",patientModel.ImagePath);
-                            
-                            [attachmentArr addObject:patientModel];
-                            [docPation updatePopAttachmentsDBTable:attachmentArr];
-                            [_tableView reloadData];
-                        }
-                        
-                        
-//                    });
-                }
+            
 //            });
             
             

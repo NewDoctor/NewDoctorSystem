@@ -226,6 +226,8 @@ static NSString *kGroupName = @"GroupName";
     
     UIApplication *application = [UIApplication sharedApplication];
     [application setApplicationIconBadgeNumber:unreadCount];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setUnReadCount" object:[NSString stringWithFormat:@"%ld",unreadCount]];
 }
 
 - (void)setupUntreatedApplyCount

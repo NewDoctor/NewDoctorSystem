@@ -4633,6 +4633,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
+
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

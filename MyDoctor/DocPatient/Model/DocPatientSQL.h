@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DocPatientModel.h"
 
 @interface DocPatientSQL : NSObject
 
 -(void)createAttachmentsDBTableWithPatient;
 -(void)updatePopAttachmentsDBTable:(NSArray *)attachmentArr;
 -(NSArray *)getAttachmentswithMailPhone:(NSString *)HxName ;
-
+-(BOOL)searchDataWithAllType:(DocPatientModel *)DocPatientModel ;
 
 @end

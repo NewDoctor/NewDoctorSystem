@@ -3707,10 +3707,7 @@
 				TargetAttributes = {
 					15AE53681C02F0680013FF1B = {
 						CreatedOnToolsVersion = 6.3;
-<<<<<<< HEAD
 						DevelopmentTeam = 5XDQ36V7UQ;
-=======
->>>>>>> 7abd537500e0db776cbe57ed2b6456af422d4593
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -4428,11 +4425,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
 				CODE_SIGN_IDENTITY = "iPhone Developer: Haocheng Zhang (N8TXHQB3RY)";
-=======
 				CODE_SIGN_IDENTITY = "iPhone Developer";
->>>>>>> 7abd537500e0db776cbe57ed2b6456af422d4593
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4458,11 +4452,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-<<<<<<< HEAD
 				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
-=======
 				PROVISIONING_PROFILE = "";
->>>>>>> 7abd537500e0db776cbe57ed2b6456af422d4593
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "ad hoc distribution";
@@ -4583,11 +4574,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
 				CODE_SIGN_IDENTITY = "iPhone Developer: Haocheng Zhang (N8TXHQB3RY)";
-=======
 				CODE_SIGN_IDENTITY = "iPhone Developer";
->>>>>>> 7abd537500e0db776cbe57ed2b6456af422d4593
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4613,11 +4601,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-<<<<<<< HEAD
 				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
-=======
 				PROVISIONING_PROFILE = "";
->>>>>>> 7abd537500e0db776cbe57ed2b6456af422d4593
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -4626,11 +4611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
 				CODE_SIGN_IDENTITY = "iPhone Developer: Haocheng Zhang (N8TXHQB3RY)";
-=======
-				CODE_SIGN_IDENTITY = "iPhone Developer";
->>>>>>> 7abd537500e0db776cbe57ed2b6456af422d4593
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4656,11 +4637,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-<<<<<<< HEAD
 				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
-=======
-				PROVISIONING_PROFILE = "";
->>>>>>> 7abd537500e0db776cbe57ed2b6456af422d4593
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

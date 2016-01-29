@@ -156,13 +156,17 @@
         }
         patientModel.phone = [dic objectForKey:@"Phone"];
         patientModel.HxName= [dic objectForKey:@"HxName"];
-        if ([dic objectForKey:@"Photo"]) {
-            UIImageView * imageView = [[UIImageView alloc] init];
-            [imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[dic objectForKey:@"Photo"]]]];
-            UIImage *headImg = imageView.image;
+        patientModel.ImagePath = [NSString stringWithFormat:@"/Library/Caches/PatientsIMAGE/%@.png",[dic objectForKey:@"HxName"]];
+        if (![docPation searchDataWithAllType:patientModel]) {
+//            UIImageView * imageView = [[UIImageView alloc] init];
+//            [imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[dic objectForKey:@"Photo"]]]];
+//            UIImage *headImg = imageView.image;
 
+        NSData * data = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[dic objectForKey:@"Photo"]]]];
+        UIImage *headImg = [[UIImage alloc]initWithData:data];
             
-      FileUtils * fileUtil = [FileUtils sharedFileUtils];
+            
+        FileUtils * fileUtil = [FileUtils sharedFileUtils];
         //创建文件下载目录
         NSString * path2 = [fileUtil createCachePath:IMAGECACHE];
         
@@ -171,7 +175,7 @@
         
         if(result)
         {
-            patientModel.ImagePath = [NSString stringWithFormat:@"/Library/Caches/PatientsIMAGE/%@.png",[dic objectForKey:@"HxName"]];
+            
             NSLog(@"%@",patientModel.ImagePath);
             
             [attachmentArr addObject:patientModel];
@@ -179,25 +183,18 @@
             [_tableView reloadData];
         }
             
-                        
-            
-//            });
-            
-            
+        }else{
+            [_tableView reloadData];
+
         }
         
         
-        
     }
-    
-    
     
     if ([arr count]==0) {
         [_tableView reloadData];
 
     }
-    //
-    //    NSLog(@"+++++%@%@",nickName,headImg);
 }
 
 -(void)viewWillAppear:(BOOL)animated

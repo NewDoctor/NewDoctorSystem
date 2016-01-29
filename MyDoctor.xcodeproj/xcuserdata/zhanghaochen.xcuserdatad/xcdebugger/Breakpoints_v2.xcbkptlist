@@ -448,11 +448,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDoctor/fundation/Chat/ChatList/ChatListViewController.m"
-            timestampString = "474886980.332987"
+            timestampString = "475749044.952583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "647"
-            endingLineNumber = "647"
+            startingLineNumber = "644"
+            endingLineNumber = "644"
             landmarkName = "-tableView:commitEditingStyle:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -690,7 +690,7 @@
                   moduleName = "MyDoctor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/DocHome/Controller/DocFinishedViewController.m"
-                  timestampString = "475203186.411213"
+                  timestampString = "475748909.145901"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "113"
@@ -705,7 +705,7 @@
                   moduleName = "MyDoctor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/DocHome/Controller/DocFinishedViewController.m"
-                  timestampString = "475203186.411556"
+                  timestampString = "475748909.146074"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "113"
@@ -769,28 +769,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyDoctor/&#x767b;&#x5f55;/logIn/BRSlogInViewController.m"
-            timestampString = "474882277.947435"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-sendInfoFromRequest:andPath:number:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MyDoctor/fundation/Chat/ChatList/ChatListViewController.m"
-            timestampString = "474886980.332987"
+            timestampString = "475749044.952583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "523"
-            endingLineNumber = "523"
+            startingLineNumber = "520"
+            endingLineNumber = "520"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -802,43 +786,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDoctor/fundation/Chat/ChatList/ChatListViewController.m"
-            timestampString = "474886980.332987"
+            timestampString = "475747776.21847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "-sendInfoFromRequest:andPath:number:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyDoctor/DocPatient/Model/DocPatientSQL.m"
-            timestampString = "474884297.95029"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "-updatePopAttachmentsDBTable:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyDoctor/fundation/Chat/ChatList/ChatListViewController.m"
-            timestampString = "474888443.432295"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "-sendInfoFromRequest:andPath:number:"
             landmarkType = "5">
          </BreakpointContent>
@@ -850,27 +802,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDoctor/fundation/Chat/ChatList/ChatListViewController.m"
-            timestampString = "474887046.116517"
+            timestampString = "475749044.952583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "-sendInfoFromRequest:andPath:number:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyDoctor/fundation/Chat/ChatList/ChatListViewController.m"
-            timestampString = "474888443.432295"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "536"
-            endingLineNumber = "536"
+            startingLineNumber = "533"
+            endingLineNumber = "533"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -889,86 +825,6 @@
             endingLineNumber = "152"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyDoctor/&#x767b;&#x5f55;/logIn/BRSlogInViewController.m"
-            timestampString = "475039726.740486"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "-sendInfoFromRequest:andPath:number:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyDoctor/&#x767b;&#x5f55;/logIn/BRSlogInViewController.m"
-            timestampString = "475039726.740486"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "-sendInfoFromRequest:andPath:number:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyDoctor/&#x767b;&#x5f55;/logIn/BRSlogInViewController.m"
-            timestampString = "475039726.740486"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "-sendInfoFromRequest:andPath:number:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__61-[BRSlogInViewController sendInfoFromRequest:andPath:number:]_block_invoke"
-                  moduleName = "MyDoctor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/%E7%99%BB%E5%BD%95/logIn/BRSlogInViewController.m"
-                  timestampString = "475203186.422706"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "424">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__61-[BRSlogInViewController sendInfoFromRequest:andPath:number:]_block_invoke_2"
-                  moduleName = "MyDoctor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/%E7%99%BB%E5%BD%95/logIn/BRSlogInViewController.m"
-                  timestampString = "475203186.423627"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "21">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1106,12 +962,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDoctor/fundation/Chat/ChatList/ChatListViewController.m"
-            timestampString = "475118808.472658"
+            timestampString = "475749044.952583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
+            startingLineNumber = "498"
+            endingLineNumber = "498"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDoctor/fundation/Chat/ChatList/ChatListViewController.m"
+            timestampString = "475747776.21847"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "-sendInfoFromRequest:andPath:number:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDoctor/DocPatient/Model/DocPatientSQL.m"
+            timestampString = "475748530.619577"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-searchDataWithAllType:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDoctor/DocPatient/Model/DocPatientSQL.m"
+            timestampString = "475748530.619577"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-searchDataWithAllType:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDoctor/fundation/Chat/ChatList/ChatListViewController.m"
+            timestampString = "475748484.53932"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "-sendInfoFromRequest:andPath:number:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

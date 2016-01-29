@@ -60,7 +60,6 @@
 
 -(NSArray *)getAttachmentswithMailPhone:(NSString *)HxName {
     NSMutableArray *attachmentArray = [NSMutableArray array];
-  
         FMResultSet *result = [self.db executeQuery:@"select * from t_Patient where HxName = ?", HxName];
         while ([result next]) {
             DocPatientModel *item = [[DocPatientModel alloc] init];
@@ -72,6 +71,15 @@
             [attachmentArray addObject:item];
         }
     return attachmentArray;
+}
+-(BOOL)searchDataWithAllType:(DocPatientModel *)DocPatientModel {
+    FMResultSet *result = [self.db executeQuery:@"select * from t_Patient where HxName = ? and name=? and Phone =? and imagePath = ?", DocPatientModel.HxName,DocPatientModel.Name,DocPatientModel.phone,DocPatientModel.ImagePath];
+    if ([result next]) {
+        NSLog(@"yes");
+        return YES;
+    }
+    NSLog(@"no");
+    return NO;
 }
 
 

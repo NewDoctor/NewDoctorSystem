@@ -15,5 +15,5 @@
 -(void)updatePopAttachmentsDBTable:(NSArray *)attachmentArr;
 -(NSArray *)getAttachmentswithMailPhone:(NSString *)HxName ;
 -(BOOL)searchDataWithAllType:(DocPatientModel *)DocPatientModel ;
-
+-(NSArray *)searchChatListByUserName:(NSString *)Name;
 @end

@@ -25,45 +25,47 @@
 @implementation MDnoticeCenterController
 
 //临时数据懒加载
--(NSMutableArray *)dataSource
-{
-    if (_dataSource == nil) {
-        _dataSource = [[NSMutableArray alloc] init];
-        MDnoticeCenterModel * group0 = [[MDnoticeCenterModel alloc] init];
-        group0.TiTle = @"关于社区医院冬季体检的通知";
-        group0.AddTime = @"2015-12-09";
-        group0.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
-        
-        MDnoticeCenterModel * group1 = [[MDnoticeCenterModel alloc] init];
-        group1.TiTle = @"关于社区医院冬季体检的通知";
-        group1.AddTime = @"2015-12-09";
-        group1.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
-
-        MDnoticeCenterModel * group2 = [[MDnoticeCenterModel alloc] init];
-        group2.TiTle = @"关于社区医院冬季体检的通知";
-        group2.AddTime = @"2015-12-09";
-        group2.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
-
-        MDnoticeCenterModel * group3 = [[MDnoticeCenterModel alloc] init];
-        group3.TiTle = @"关于社区医院冬季体检的通知";
-        group3.AddTime = @"2015-12-09";
-        group3.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
-
-        MDnoticeCenterModel * group4 = [[MDnoticeCenterModel alloc] init];
-        group4.TiTle = @"关于社区医院冬季体检的通知";
-        group4.AddTime = @"2015-12-09";
-        group4.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
-        
-        [_dataSource addObject:group0];
-        [_dataSource addObject:group0];
-        [_dataSource addObject:group0];
-        [_dataSource addObject:group0];
-        [_dataSource addObject:group0];
-        
-    }
-    return _dataSource;
-
-}
+/*
+ -(NSMutableArray *)dataSource
+ {
+ if (_dataSource == nil) {
+ _dataSource = [[NSMutableArray alloc] init];
+ MDnoticeCenterModel * group0 = [[MDnoticeCenterModel alloc] init];
+ group0.TiTle = @"关于社区医院冬季体检的通知";
+ group0.AddTime = @"2015-12-09";
+ group0.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
+ 
+ MDnoticeCenterModel * group1 = [[MDnoticeCenterModel alloc] init];
+ group1.TiTle = @"关于社区医院冬季体检的通知";
+ group1.AddTime = @"2015-12-09";
+ group1.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
+ 
+ MDnoticeCenterModel * group2 = [[MDnoticeCenterModel alloc] init];
+ group2.TiTle = @"关于社区医院冬季体检的通知";
+ group2.AddTime = @"2015-12-09";
+ group2.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
+ 
+ MDnoticeCenterModel * group3 = [[MDnoticeCenterModel alloc] init];
+ group3.TiTle = @"关于社区医院冬季体检的通知";
+ group3.AddTime = @"2015-12-09";
+ group3.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
+ 
+ MDnoticeCenterModel * group4 = [[MDnoticeCenterModel alloc] init];
+ group4.TiTle = @"关于社区医院冬季体检的通知";
+ group4.AddTime = @"2015-12-09";
+ group4.Content = @"为了让广大居民度过一个健康祥和的冬季，居委会特邀社区医院的医护人员来我社区为广大居民进行一次全面的免费普查活动";
+ 
+ [_dataSource addObject:group0];
+ [_dataSource addObject:group0];
+ [_dataSource addObject:group0];
+ [_dataSource addObject:group0];
+ [_dataSource addObject:group0];
+ 
+ }
+ return _dataSource;
+ 
+ }
+ */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -99,14 +101,23 @@
     model.parameter = parameter;
     model.delegate = self;
     [model starRequest];
-
+    
 }
 
+#pragma mark - sendInfoToCtr
 -(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
 {
-    MDLog(@"%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
-//    NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
-//    NSLog(@"%@",dic);
+    _dataSource = [[NSMutableArray alloc] init];
+    NSLog(@"%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    NSDictionary * dictionary = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
+    NSArray * obj = [dictionary objectForKey:@"obj"];
+    for (NSDictionary * dic in obj) {
+        MDnoticeCenterModel * model = [[MDnoticeCenterModel alloc] init];
+        [model setValuesForKeysWithDictionary:dic];
+        [_dataSource addObject:model];
+    }
+    [_tableView reloadData];
+    //    NSLog(@"%@",dic);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -121,9 +132,9 @@
     _tableView.dataSource = self;
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//    [_tableView registerClass:[MDnoticeCenterCell class] forCellReuseIdentifier:@"iden"];
+    //    [_tableView registerClass:[MDnoticeCenterCell class] forCellReuseIdentifier:@"iden"];
     [self.view addSubview:_tableView];
-
+    
 }
 
 #pragma mark - TableViewDelegate
@@ -147,7 +158,7 @@
 {
     
     MDnoticeCenterCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
-
+    
     
     return cell.cellHeight;
 }
@@ -174,29 +185,31 @@
     }
     if ([_dataSource count]>0) {
         MDnoticeCenterModel * model = _dataSource[indexPath.section];
-//        cell.name=service.Namedrug;
-//        cell.number=service.numberDrug;
-//        cell.money=service.moneyDrug;
-        cell.title = model.TiTle;
+        //        cell.name=service.Namedrug;
+        //        cell.number=service.numberDrug;
+        //        cell.money=service.moneyDrug;
+        cell.title = model.Title;
         cell.time = model.AddTime;
         cell.detail = [NSString stringWithFormat:@"   %@",model.Content];
     }
-
-//    cell.title = @"标题";
-//    cell.time = @"2015-09-08";
-//    cell.detail = @"内容:从健康的四大基石（合理膳食、适量运动、戒烟内容:从健康的四大基石（合理膳食、适量运动、戒烟内容:从健康的四大基石（合理膳食、适量运动、戒烟内容:从健康的四大基石（合理膳食、适量运动、戒烟内容:从健康的四大基石（合理膳食、适量运动、戒烟";
+    
+    //    cell.title = @"标题";
+    //    cell.time = @"2015-09-08";
+    //    cell.detail = @"内容:从健康的四大基石（合理膳食、适量运动、戒烟内容:从健康的四大基石（合理膳食、适量运动、戒烟内容:从健康的四大基石（合理膳食、适量运动、戒烟内容:从健康的四大基石（合理膳食、适量运动、戒烟内容:从健康的四大基石（合理膳食、适量运动、戒烟";
     
     [cell drawCell];
-
     
-       return cell;
+    
+    return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MDNoticeDetailViewController * noticeDetailVC = [[MDNoticeDetailViewController alloc] init];
+    MDnoticeCenterModel * model = _dataSource[indexPath.section];
     noticeDetailVC.titleLab = @"通知公告";
     noticeDetailVC.rightDownBtn.hidden = YES;
+    noticeDetailVC.noticeDetail = model;
     
     noticeDetailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:noticeDetailVC animated:YES];
@@ -206,13 +219,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

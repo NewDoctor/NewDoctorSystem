@@ -24,6 +24,7 @@
 #import "UserProfileManager.h"
 #import "EaseMob.h"
 #import "TTGlobalUICommon.h"
+#import "DocPatientSQL.h"
 //两次提示的默认间隔
 static const CGFloat kDefaultPlaySoundInterval = 3.0;
 static NSString *kMessageType = @"MessageType";
@@ -412,6 +413,9 @@ static NSString *kGroupName = @"GroupName";
 - (void)showNotificationWithMessage:(EMMessage *)message
 {
     EMPushNotificationOptions *options = [[EaseMob sharedInstance].chatManager pushNotificationOptions];
+//    推送消息显示的类型设置为显示消息内容
+    options.displayStyle = ePushNotificationDisplayStyle_messageSummary;
+
     //发送本地推送
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     notification.fireDate = [NSDate date]; //触发通知的时间
@@ -469,7 +473,11 @@ static NSString *kGroupName = @"GroupName";
                 title = [NSString stringWithFormat:@"%@(%@)", message.groupSenderName, chatroomName];
             }
         }
-        
+        //此处设置环信推送显示对方的昵称
+//        DocPatientSQL * docPation = [[DocPatientSQL alloc] init];
+//        [docPation createAttachmentsDBTableWithPatient];
+//        title=[docPation searchDataWithHxName:title];
+
         notification.alertBody = [NSString stringWithFormat:@"%@:%@", title, messageStr];
     }
     else{

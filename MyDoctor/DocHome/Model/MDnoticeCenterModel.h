@@ -20,12 +20,16 @@
 
 @property (nonatomic,assign) int UserID;
 @property (nonatomic,strong) NSString * Content;
-@property (nonatomic,strong) NSString * TiTle;
+@property (nonatomic,strong) NSString * Title;
 @property (nonatomic,assign) int SendFlag;
 @property (nonatomic,assign) int ID;
 @property (nonatomic,strong) NSString * AddTime;
 @property (nonatomic,strong) NSString * NoticeTime;
 @property (nonatomic,strong) NSString * PicUrl;
+@property (nonatomic,strong) NSString * CensusTime;
+@property (nonatomic,strong) NSString * HostUnit;
+@property (nonatomic,strong) NSString * Detail;
+@property (nonatomic,strong) NSString * CensusAddress;
 
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key;
 

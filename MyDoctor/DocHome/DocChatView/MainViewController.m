@@ -474,9 +474,9 @@ static NSString *kGroupName = @"GroupName";
             }
         }
         //此处设置环信推送显示对方的昵称
-//        DocPatientSQL * docPation = [[DocPatientSQL alloc] init];
-//        [docPation createAttachmentsDBTableWithPatient];
-//        title=[docPation searchDataWithHxName:title];
+        DocPatientSQL * docPation = [[DocPatientSQL alloc] init];
+        [docPation createAttachmentsDBTableWithPatient];
+        title=[docPation searchDataWithHxName:title];
 
         notification.alertBody = [NSString stringWithFormat:@"%@:%@", title, messageStr];
     }

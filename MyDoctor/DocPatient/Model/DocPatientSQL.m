@@ -82,5 +82,15 @@
     return NO;
 }
 
+-(NSString *)searchDataWithHxName:(NSString *)HxName {
+    FMResultSet *result = [self.db executeQuery:@"select * from t_Patient where HxName = ? ", HxName];
+    if ([result next]) {
+        NSLog(@"yes");
+        return [result stringForColumn:@"name"];
+    }
+    NSLog(@"no");
+    return nil;
+}
+
 
 @end

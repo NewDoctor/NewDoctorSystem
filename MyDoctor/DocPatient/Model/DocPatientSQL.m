@@ -72,6 +72,22 @@
         }
     return attachmentArray;
 }
+
+-(NSArray *)searchChatListByUserName:(NSString *)Name {
+    NSMutableArray *attachmentArray = [NSMutableArray array];
+    FMResultSet *result = [self.db executeQuery:[NSString stringWithFormat:@"select * from t_Patient where name like '%%%@%%'",Name ]];
+    while ([result next]) {
+        DocPatientModel *item = [[DocPatientModel alloc] init];
+        item.ID = [result stringForColumn:@"id"];
+        item.HxName=[result stringForColumn:@"HxName"];
+        item.Name = [result stringForColumn:@"name"];
+        item.phone = [result stringForColumn:@"Phone"];
+        item.ImagePath = [result stringForColumn:@"imagePath"];
+        [attachmentArray addObject:item];
+    }
+    return attachmentArray;
+}
+
 -(BOOL)searchDataWithAllType:(DocPatientModel *)DocPatientModel {
     FMResultSet *result = [self.db executeQuery:@"select * from t_Patient where HxName = ? and name=? and Phone =? and imagePath = ?", DocPatientModel.HxName,DocPatientModel.Name,DocPatientModel.phone,DocPatientModel.ImagePath];
     if ([result next]) {

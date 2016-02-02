@@ -16,4 +16,5 @@
 -(NSArray *)getAttachmentswithMailPhone:(NSString *)HxName ;
 -(BOOL)searchDataWithAllType:(DocPatientModel *)DocPatientModel ;
 -(NSString *)searchDataWithHxName:(NSString *)HxName;
+-(NSArray *)searchChatListByUserName:(NSString *)Name;
 @end

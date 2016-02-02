@@ -28,6 +28,7 @@
 #import "UIImageView+WebCache.h"
 #import "FileUtils.h"
 #import "DocPatientSQL.h"
+#import "RealtimeSearchUtil.h"
 #import "DocPatientModel.h"
 #define IMAGECACHE  @"PatientsIMAGE/"
 
@@ -187,8 +188,6 @@
             [_tableView reloadData];
 
         }
-        
-        
     }
     
     if ([arr count]==0) {
@@ -328,13 +327,36 @@
             if (cell == nil) {
                 cell = [[ChatListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
             }
-            
+            DocPatientSQL * patient = [[DocPatientSQL alloc] init];
+            [patient createAttachmentsDBTableWithPatient];
             EMConversation *conversation = [weakSelf.searchController.resultsSource objectAtIndex:indexPath.row];
-            cell.name = conversation.chatter;
+            NSArray * array=[patient getAttachmentswithMailPhone:conversation.chatter];
+            NSLog(@"%@",array);
+            
+           
             cell.backgroundColor = [UIColor clearColor];
             if (conversation.conversationType == eConversationTypeChat) {
-                cell.name = [[RobotManager sharedInstance] getRobotNickWithUsername:conversation.chatter];
-                cell.placeholderImage = [UIImage imageNamed:@"chatListCellHead.png"];
+                
+                DocPatientModel * patienModel;
+                if ([array count]>0) {
+                    patienModel= array[0];
+                }else{
+                    patienModel = nil;
+                }
+                cell.name = patienModel.Name;
+                if ([patienModel.Name length]==0) {
+                    cell.name = [[RobotManager sharedInstance] getRobotNickWithUsername:conversation.chatter];
+                }
+                UIImage * headImg = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@%@",NSHomeDirectory(),patienModel.ImagePath]];
+                
+                if (headImg) {
+                    cell.placeholderImage = headImg;
+                }
+                else
+                {
+                    cell.placeholderImage = [UIImage imageNamed:@"chatListCellHead"];
+                }
+                
             }
             else{
                 NSString *imageName = @"groupPublicHeader";
@@ -379,6 +401,7 @@
                                                             conversationType:conversation.conversationType];
                 chatController.title = _name;
             }
+            chatController.hidesBottomBarWhenPushed = YES;
             [weakSelf.navigationController pushViewController:chatController animated:YES];
         }];
     }
@@ -504,13 +527,6 @@
         cell = [[ChatListCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
     }
     EMConversation *conversation = [self.dataSource objectAtIndex:indexPath.row];
-//    cell.name = conversation.chatter;
-    
-    
-    //取出conversation.chatter对应的数据库
-    
-    NSLog(@"++%@",conversation.chatter);
-    
     NSArray * array=[patient getAttachmentswithMailPhone:conversation.chatter];
     NSLog(@"%@",array);
     
@@ -661,16 +677,28 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    //    __weak typeof(self) weakSelf = self;
-    //    [[RealtimeSearchUtil currentUtil] realtimeSearchWithSource:self.dataSource searchText:(NSString *)searchText collationStringSelector:@selector(showName) resultBlock:^(NSArray *results) {
-    //        if (results) {
-    //            dispatch_async(dispatch_get_main_queue(), ^{
-    //                [weakSelf.searchController.resultsSource removeAllObjects];
-    //                [weakSelf.searchController.resultsSource addObjectsFromArray:results];
-    //                [weakSelf.searchController.searchResultsTableView reloadData];
-    //            });
-    //        }
-    //    }];
+    
+    DocPatientSQL * docPation = [[DocPatientSQL alloc] init];
+    [docPation createAttachmentsDBTableWithPatient];
+    
+    NSArray * searchArray = [docPation searchChatListByUserName:searchText];
+    if ([searchArray count]>0) {
+        DocPatientModel * patienModel=searchArray[0];
+        searchText=patienModel.HxName;
+    }
+    
+    
+    
+    __weak typeof(self) weakSelf = self;
+        [[RealtimeSearchUtil currentUtil] realtimeSearchWithSource:self.dataSource searchText:(NSString *)searchText collationStringSelector:@selector(showName) resultBlock:^(NSArray *results) {
+            if (results) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf.searchController.resultsSource removeAllObjects];
+                    [weakSelf.searchController.resultsSource addObjectsFromArray:results];
+                    [weakSelf.searchController.searchResultsTableView reloadData];
+                });
+            }
+        }];
 }
 
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar

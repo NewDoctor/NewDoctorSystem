@@ -29,50 +29,6 @@
 
 
 @implementation DocMyPatientsViewController
-//
-//-(NSMutableArray *)dataSource
-//{
-//    if (_dataSource == nil) {
-//        _dataSource = [[NSMutableArray alloc] init];
-//        DocMyPatientsModel * group0 = [[DocMyPatientsModel alloc] init];
-//        group0.headImg = @"大妈.jpg";
-//        group0.name = @"张大妈";
-//        group0.age = @"58";
-//        group0.sex = @"女";
-//        
-//        DocMyPatientsModel * group1 = [[DocMyPatientsModel alloc] init];
-//        group1.headImg = @"大叔";
-//        group1.name = @"李大叔";
-//        group1.age = @"44";
-//        group1.sex = @"男";
-//        
-//        DocMyPatientsModel * group2 = [[DocMyPatientsModel alloc] init];
-//        group2.headImg = @"大爷.jpg";
-//        group2.name = @"赵大爷";
-//        group2.age = @"68";
-//        group2.sex = @"男";
-//        
-//        DocMyPatientsModel * group3 = [[DocMyPatientsModel alloc] init];
-//        group3.headImg = @"叔叔.jpg";
-//        group3.name = @"老王";
-//        group3.age = @"39";
-//        group3.sex = @"男";
-//        
-//        DocMyPatientsModel * group4 = [[DocMyPatientsModel alloc] init];
-//        group4.headImg = @"大婶.jpg";
-//        group4.name = @"张妈";
-//        group4.age = @"58";
-//        group4.sex = @"女";
-//        
-//        [_dataSource addObject:group0];
-//        [_dataSource addObject:group1];
-//        [_dataSource addObject:group2];
-//        [_dataSource addObject:group3];
-//        [_dataSource addObject:group4];
-//
-//    }
-//    return _dataSource;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

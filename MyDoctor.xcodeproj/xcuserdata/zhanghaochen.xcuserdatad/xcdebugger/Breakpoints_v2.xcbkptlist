@@ -206,11 +206,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDoctor/&#x767b;&#x5f55;/logIn/BRSEndSignlnViewController.m"
-            timestampString = "471862436.789188"
+            timestampString = "476326055.383665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "-finish:"
             landmarkType = "5">
          </BreakpointContent>
@@ -222,12 +222,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDoctor/&#x767b;&#x5f55;/logIn/BRSSignIn2ViewController.m"
-            timestampString = "473049315.47783"
+            timestampString = "476326055.383665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "459"
-            endingLineNumber = "459"
-            landmarkName = "-Actiondo2"
+            startingLineNumber = "457"
+            endingLineNumber = "457"
+            landmarkName = "-selectBtnClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -328,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDoctor/&#x767b;&#x5f55;/logIn/BRSSignIn2ViewController.m"
-            timestampString = "473049315.47783"
+            timestampString = "476326055.383665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "329"
-            endingLineNumber = "329"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
             landmarkName = "-next:"
             landmarkType = "5">
          </BreakpointContent>
@@ -690,7 +690,7 @@
                   moduleName = "MyDoctor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/DocHome/Controller/DocFinishedViewController.m"
-                  timestampString = "476012220.513098"
+                  timestampString = "476012331.518389"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "113"
@@ -705,7 +705,7 @@
                   moduleName = "MyDoctor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zhanghaochen/Desktop/TheDoctorSystem/MyDoctor/DocHome/Controller/DocFinishedViewController.m"
-                  timestampString = "476012220.513263"
+                  timestampString = "476012331.518839"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "113"
@@ -754,12 +754,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDoctor/DocMyView/Controller/DocMyPatientsViewController.m"
-            timestampString = "474859901.553182"
+            timestampString = "476326055.383665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "-sendInfoFromRequest:andPath:number:"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-createHeaderView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -866,13 +866,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDoctor/DocMyView/Controller/MDMyViewController.m"
-            timestampString = "475040199.032334"
+            timestampString = "476326055.383665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "468"
-            endingLineNumber = "468"
-            landmarkName = "-uploadImage2Server:callback:"
-            landmarkType = "5">
+            startingLineNumber = "467"
+            endingLineNumber = "467"
+            landmarkName = "@implementation MDMyViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

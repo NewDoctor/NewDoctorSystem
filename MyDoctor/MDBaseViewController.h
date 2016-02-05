@@ -11,6 +11,7 @@
 #import "MX_MASConstraintMaker.h"
 #import "View+MASAdditions.h"
 #import "UIView+ViewExtension.h"
+#import "BRSSysUtil.h"
 
 @interface MDBaseViewController : UIViewController
 

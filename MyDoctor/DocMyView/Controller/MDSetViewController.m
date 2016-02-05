@@ -21,11 +21,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavigationBarWithrightBtn:nil leftBtn:@"navigationbar_back"];
-    //返回按钮点击
-    [self.leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    BRSSysUtil *util = [BRSSysUtil sharedSysUtil];
+    [util setNavigationLeftButton:self.navigationItem target:self selector:@selector(backBtnClick) image:[UIImage imageNamed:@"navigationbar_back"] title:nil];    //返回按钮点击
     self.navigationItem.title = @"设置";
-    
     [self DataArray];
     [self TableView];
     [self EXIT];
@@ -175,7 +173,7 @@
     [self.view addSubview:button];
     [button mas_makeConstraints:^(MX_MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX);
-        make.top.equalTo(self.view.mas_top).with.offset(110*autoSizeScaleY);
+        make.top.equalTo(self.view.mas_top).with.offset(120*autoSizeScaleY);
         make.left.equalTo(self.view.mas_left).with.offset(10);
         make.right.equalTo(self.view.mas_right).with.offset(-10);
         make.height.mas_equalTo(40*autoSizeScaleY);

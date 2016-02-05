@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1523EBD61C5306E900321DF8 /* MDChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1523EBD51C5306E900321DF8 /* MDChangePasswordViewController.m */; };
+		1523EC7C1C64252800321DF8 /* BRSSysUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1523EC7B1C64252800321DF8 /* BRSSysUtil.m */; };
 		1532A6FA1C3F83A200D0582B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1532A6EF1C3F83A200D0582B /* FMDatabase.m */; };
 		1532A6FB1C3F83A200D0582B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1532A6F11C3F83A200D0582B /* FMDatabaseAdditions.m */; };
 		1532A6FC1C3F83A200D0582B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1532A6F31C3F83A200D0582B /* FMDatabasePool.m */; };
@@ -618,6 +619,8 @@
 /* Begin PBXFileReference section */
 		1523EBD41C5306E900321DF8 /* MDChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDChangePasswordViewController.h; sourceTree = "<group>"; };
 		1523EBD51C5306E900321DF8 /* MDChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDChangePasswordViewController.m; sourceTree = "<group>"; };
+		1523EC7A1C64252800321DF8 /* BRSSysUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSSysUtil.h; sourceTree = "<group>"; };
+		1523EC7B1C64252800321DF8 /* BRSSysUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSSysUtil.m; sourceTree = "<group>"; };
 		1532A6EE1C3F83A200D0582B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		1532A6EF1C3F83A200D0582B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		1532A6F01C3F83A200D0582B /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -1627,6 +1630,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1523EC761C64251700321DF8 /* BRSSysUtil */ = {
+			isa = PBXGroup;
+			children = (
+				1523EC7A1C64252800321DF8 /* BRSSysUtil.h */,
+				1523EC7B1C64252800321DF8 /* BRSSysUtil.m */,
+			);
+			path = BRSSysUtil;
+			sourceTree = "<group>";
+		};
 		1532A6DB1C3F838C00D0582B /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
@@ -1710,6 +1722,7 @@
 		153C1E661C03FB8C00F87014 /* fundation */ = {
 			isa = PBXGroup;
 			children = (
+				1523EC761C64251700321DF8 /* BRSSysUtil */,
 				15800FA11C4DCB5E00FCB87B /* MJRefresh */,
 				6A6C98EB1C473B7900643C97 /* GtSdkLib */,
 				1532A6DB1C3F838C00D0582B /* fmdb */,
@@ -3707,6 +3720,7 @@
 				TargetAttributes = {
 					15AE53681C02F0680013FF1B = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 8TUZW57LD3;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -4178,6 +4192,7 @@
 				6AB9BB241C2BE6E1004BF6A7 /* TTGlobalUICommon.m in Sources */,
 				6AB9BB801C2BE876004BF6A7 /* MessageReadManager.m in Sources */,
 				6A6C99D91C477D5400643C97 /* MDMyViewItem.m in Sources */,
+				1523EC7C1C64252800321DF8 /* BRSSysUtil.m in Sources */,
 				6AB9BAD41C2BE348004BF6A7 /* PSTCollectionViewController.m in Sources */,
 				6AB9BA251C2BE21F004BF6A7 /* EMChooseViewController.m in Sources */,
 				6A65234B1C1E930E00227C63 /* UIImage+WebP.m in Sources */,
@@ -4424,7 +4439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Saibainuo Technology Co., Ltd. (8TUZW57LD3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4450,7 +4465,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "255cb888-a7f9-4472-b3cb-2527389643be";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "ad hoc distribution";
@@ -4571,7 +4586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Saibainuo Technology Co., Ltd. (8TUZW57LD3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4597,7 +4612,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "255cb888-a7f9-4472-b3cb-2527389643be";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -4606,7 +4621,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Saibainuo Technology Co., Ltd. (8TUZW57LD3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4632,9 +4647,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
-
+				PROVISIONING_PROFILE = "255cb888-a7f9-4472-b3cb-2527389643be";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

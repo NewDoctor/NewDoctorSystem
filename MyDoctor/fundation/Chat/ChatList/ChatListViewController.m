@@ -127,6 +127,7 @@
     NSString * parameter = chatId;
     model.delegate = self;
     model.parameter = parameter;
+    model.isHideHud=YES;
     [model starRequest];
     
 }

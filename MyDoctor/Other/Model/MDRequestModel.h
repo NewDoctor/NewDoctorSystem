@@ -30,6 +30,8 @@
 
 @property (nonatomic,assign) int methodNum;
 
+@property (nonatomic,assign) BOOL isHideHud;
+
 @property (nonatomic,weak) id<sendInfoToCtr>delegate;
 
 -(void)starRequest;

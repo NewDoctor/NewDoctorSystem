@@ -10,6 +10,7 @@
 #define MyDoctor_Header_h
 
 #import "MDUserVO.h"
+#import "Reachability.h"
 
 //状态栏与导航栏总高度
 #define TOPHEIGHT ([[UIApplication sharedApplication] statusBarFrame].size.height+self.navigationController.navigationBar.frame.size.height)
@@ -65,7 +66,7 @@
 #define SECONDOFDAY 60*60*24.0
 
 //定义网络状态检测
-#define NO_NET_WORK [MX_Reachability reachabilityForInternetConnection].currentReachabilityStatus == NotReachable
+#define NO_NET_WORK [Reachability reachabilityForInternetConnection].currentReachabilityStatus == NotReachable
 
 //#define NO_NET_WORK2 [MX_Reachability reachabilityWithHostName:@"www.baidu.com"].currentReachabilityStatus == NotReachable
 

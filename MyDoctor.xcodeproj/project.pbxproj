@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152083791C71601D006E90BA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 152083781C71601D006E90BA /* Reachability.m */; };
 		1523EBD61C5306E900321DF8 /* MDChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1523EBD51C5306E900321DF8 /* MDChangePasswordViewController.m */; };
 		1523EC7C1C64252800321DF8 /* BRSSysUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1523EC7B1C64252800321DF8 /* BRSSysUtil.m */; };
 		1532A6FA1C3F83A200D0582B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1532A6EF1C3F83A200D0582B /* FMDatabase.m */; };
@@ -617,6 +618,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152083771C71601D006E90BA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		152083781C71601D006E90BA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		1523EBD41C5306E900321DF8 /* MDChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDChangePasswordViewController.h; sourceTree = "<group>"; };
 		1523EBD51C5306E900321DF8 /* MDChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDChangePasswordViewController.m; sourceTree = "<group>"; };
 		1523EC7A1C64252800321DF8 /* BRSSysUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSSysUtil.h; sourceTree = "<group>"; };
@@ -1630,6 +1633,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		152083731C715BC2006E90BA /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				152083771C71601D006E90BA /* Reachability.h */,
+				152083781C71601D006E90BA /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		1523EC761C64251700321DF8 /* BRSSysUtil */ = {
 			isa = PBXGroup;
 			children = (
@@ -1722,6 +1734,7 @@
 		153C1E661C03FB8C00F87014 /* fundation */ = {
 			isa = PBXGroup;
 			children = (
+				152083731C715BC2006E90BA /* Reachability */,
 				1523EC761C64251700321DF8 /* BRSSysUtil */,
 				15800FA11C4DCB5E00FCB87B /* MJRefresh */,
 				6A6C98EB1C473B7900643C97 /* GtSdkLib */,
@@ -3720,7 +3733,7 @@
 				TargetAttributes = {
 					15AE53681C02F0680013FF1B = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 5XDQ36V7UQ;
+						DevelopmentTeam = 8TUZW57LD3;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -4134,6 +4147,7 @@
 				153C1E851C03FB8C00F87014 /* NSArray+MASAdditions.m in Sources */,
 				6AB9BB551C2BE80B004BF6A7 /* DXFaceView.m in Sources */,
 				154169A11C34CFAE00A69A7D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				152083791C71601D006E90BA /* Reachability.m in Sources */,
 				15F0E0391C506FFF003B5B2F /* MJRefreshComponent.m in Sources */,
 				1532A7091C3F8DE500D0582B /* DocPatientSQL.m in Sources */,
 				6AB9BB4B1C2BE7E7004BF6A7 /* ChatViewController+Category.m in Sources */,
@@ -4439,7 +4453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Haocheng Zhang (N8TXHQB3RY)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Saibainuo Technology Co., Ltd. (8TUZW57LD3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4465,7 +4479,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
+				PROVISIONING_PROFILE = "255cb888-a7f9-4472-b3cb-2527389643be";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "ad hoc distribution";
@@ -4586,7 +4600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Haocheng Zhang (N8TXHQB3RY)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Saibainuo Technology Co., Ltd. (8TUZW57LD3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4612,7 +4626,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
+				PROVISIONING_PROFILE = "255cb888-a7f9-4472-b3cb-2527389643be";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -4621,7 +4635,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Haocheng Zhang (N8TXHQB3RY)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin Saibainuo Technology Co., Ltd. (8TUZW57LD3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_BITCODE = NO;
@@ -4647,7 +4661,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = MX.SaBaiNuo.MyDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3a8ce3aa-c644-44a2-9a70-1cebe8dd45ba";
+				PROVISIONING_PROFILE = "255cb888-a7f9-4472-b3cb-2527389643be";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

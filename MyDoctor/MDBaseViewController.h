@@ -19,6 +19,6 @@
 @property (nonatomic,strong) UIButton * rightBtn;
 
 -(void)setNavigationBarWithrightBtn:(NSString *)rightBtnTitle leftBtn:(NSString *)leftBtnImg;
-
++(BOOL)checkNetWork;
 @end
 

@@ -14,12 +14,16 @@
 #import "MDConst.h"
 #import "GTMBase64.h"
 #import "MBProgressHUD.h"
-
+#import "MDBaseViewController.h"
 
 @implementation MDRequestModel
 
 -(void)starRequest
 {
+    
+    if (![MDBaseViewController checkNetWork]) {
+        return;
+    }
     MBProgressHUD *hud;
     if (_isHideHud) {
         hud = nil;

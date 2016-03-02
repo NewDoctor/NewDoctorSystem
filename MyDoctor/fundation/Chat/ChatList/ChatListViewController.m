@@ -547,6 +547,8 @@
         
         NSLog(@"!!!%@%@",NSHomeDirectory(),patienModel.ImagePath);
         
+        NSLog(@"%@",NSHomeDirectory());
+        
         
         if (headImg) {
             cell.placeholderImage = headImg;

@@ -62,6 +62,7 @@
         _rightBtn.frame = [[UIImageView alloc] initWithImage:[UIImage imageNamed:rightBtnTitle]].frame;
         [_rightBtn setBackgroundImage:[UIImage imageNamed:rightBtnTitle] forState:UIControlStateNormal];
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_rightBtn];
+        
     }
     
     //设置左按钮

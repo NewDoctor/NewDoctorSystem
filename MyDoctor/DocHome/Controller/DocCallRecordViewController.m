@@ -83,14 +83,14 @@
     NSLog(@"%@",array);
     for (int i=0; i<[array count]; i++) {
         DocServiceFolerVO * sfv2=[[DocServiceFolerVO alloc] init];
-        sfv2.Id=[array[i] objectForKey:@"id"];
-        sfv2.serviceType=@"电话咨询";
-        sfv2.serviceStatus=@"已完成";
+        sfv2.id=[array[i] objectForKey:@"id"];
+        sfv2.CareInfoName=@"电话咨询";
+        sfv2.OrderType=@"已完成";
         sfv2.Phone=[array[i] objectForKey:@"Phone"];
         sfv2.name=[array[i] objectForKey:@"RealName"];
         sfv2.headImg = [NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[array[i] objectForKey:@"Photo"]];
         NSLog(@"------------%@",[NSString stringWithFormat:@"%@%@",[MDUserVO userVO].photourl,[array[i] objectForKey:@"Photo"]]);
-        sfv2.Time=[array[i] objectForKey:@"ConsultTime"];
+        sfv2.CreateTime=[array[i] objectForKey:@"ConsultTime"];
         [dataArray addObject:sfv2];
     }
     
@@ -132,9 +132,9 @@
     if ([dataArray count]>0) {
         DocServiceFolerVO * service=dataArray[indexPath.row];
         cell.name=service.name;
-        cell.serviceType=service.serviceType;
-        cell.serviceStatus=service.serviceStatus;
-        cell.time=service.Time;
+        cell.serviceType=service.CareInfoName;
+        cell.serviceStatus=service.OrderType;
+        cell.time=service.CreateTime;
         cell.headImg =service.headImg;
     }
     [cell drawCell];

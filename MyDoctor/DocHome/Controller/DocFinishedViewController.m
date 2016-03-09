@@ -115,9 +115,9 @@
     }
     if ([dataArray count]>0) {
         DocServiceFolerVO * service=dataArray[indexPath.row];
-        cell.serviceType=service.serviceType;
-        cell.serviceStatus=service.serviceStatus;
-        cell.time=service.Time;
+        cell.serviceType=service.CareInfoName;
+//        cell.serviceStatus=service.serviceStatus;
+        cell.time=service.CreateTime;
         cell.headImg = service.headImg;
     }
     [cell drawCell];

@@ -72,6 +72,7 @@
 //请求数据回调
 -(void)sendInfoFromRequest:(id)response andPath:(NSString *)path number:(NSInteger)num
 {
+    
     //回馈数据
     if (curruntPage == 1) {
         [dataArray removeAllObjects];
@@ -79,7 +80,20 @@
     NSLog(@"未完成信息%@",[[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
     
     NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
+    
+    NSArray * obj = [dic objectForKey:@"obj"];
+    
+    for (NSDictionary * dictionary in obj) {
+        DocServiceFolerVO * model = [[DocServiceFolerVO alloc] init];
+        [model setValuesForKeysWithDictionary:dictionary];
+        [dataArray addObject:model];
+    }
+    
+    
+    
+//    [dataArray addObjectsFromArray:[dic objectForKey:@"obj"]];
     NSLog(@"%@",dic);
+    
     
     
     [_tableView reloadData];
@@ -118,10 +132,13 @@
         [item removeFromSuperview];
     }
     if ([dataArray count]>0) {
+        NSLog(@"%@",dataArray);
         DocServiceFolerVO * service=dataArray[indexPath.row];
-        cell.serviceType=service.serviceType;
-        cell.serviceStatus=service.serviceStatus;
-        cell.time=service.Time;
+        
+        NSLog(@"====%@",service);
+        cell.serviceType= service.CareInfoName;
+        cell.serviceStatus=@"未完成";
+        cell.time=service.CreateTime;
         cell.headImg = service.headImg;
     }
     [cell drawCell];

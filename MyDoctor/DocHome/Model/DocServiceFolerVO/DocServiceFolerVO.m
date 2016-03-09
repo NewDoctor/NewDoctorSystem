@@ -10,12 +10,19 @@
 
 @implementation DocServiceFolerVO
 
-@synthesize Id;
-@synthesize serviceType;
-@synthesize serviceStatus;
-@synthesize Time;
+@synthesize id;
+@synthesize OrderType;
+@synthesize CareInfoName;
+@synthesize CreateTime;
 @synthesize headImg;
 @synthesize name;
 @synthesize details;
 @synthesize Phone;
+@synthesize UserId;
+
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    
+}
+
 @end
